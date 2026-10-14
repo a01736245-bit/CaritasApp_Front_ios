@@ -1,0 +1,32 @@
+# Referencias y documentación
+Referencias/
+**/Referencias/
+*.md
+*.MD
+
+# Archivos de macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode - archivos temporales
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.xcuserdatad/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# Archivos temporales
+*.log
+*.tmp
+*.swp
+
+# Credenciales y archivos privados
+.env
+.env.*
+*.p12
+*.mobileprovision

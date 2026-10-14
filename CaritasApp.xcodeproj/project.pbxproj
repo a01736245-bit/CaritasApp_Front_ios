@@ -6,7 +6,125 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6955F736307F6030004C9642 /* gradle-wrapper.jar in Frameworks */ = {isa = PBXBuildFile; fileRef = 6955F723307F602F004C9642 /* gradle-wrapper.jar */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		6955F673307F602F004C9642 /* ExampleInstrumentedTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ExampleInstrumentedTest.kt; sourceTree = "<group>"; };
+		6955F679307F602F004C9642 /* centers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = centers.json; sourceTree = "<group>"; };
+		6955F67B307F602F004C9642 /* CariVitaTtsController.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CariVitaTtsController.kt; sourceTree = "<group>"; };
+		6955F67C307F602F004C9642 /* CentersSpeakable.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CentersSpeakable.kt; sourceTree = "<group>"; };
+		6955F67D307F602F004C9642 /* ListenAction.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ListenAction.kt; sourceTree = "<group>"; };
+		6955F67E307F602F004C9642 /* LocalCariVitaTts.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LocalCariVitaTts.kt; sourceTree = "<group>"; };
+		6955F67F307F602F004C9642 /* SpeakableText.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SpeakableText.kt; sourceTree = "<group>"; };
+		6955F681307F602F004C9642 /* ExternalFormsConfig.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ExternalFormsConfig.kt; sourceTree = "<group>"; };
+		6955F683307F602F004C9642 /* DonationCatalog.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DonationCatalog.kt; sourceTree = "<group>"; };
+		6955F684307F602F004C9642 /* ExcelServiceCatalog.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ExcelServiceCatalog.kt; sourceTree = "<group>"; };
+		6955F685307F602F004C9642 /* OrientationCatalog.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrientationCatalog.kt; sourceTree = "<group>"; };
+		6955F686307F602F004C9642 /* ServiceCatalog.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ServiceCatalog.kt; sourceTree = "<group>"; };
+		6955F687307F602F004C9642 /* ServiceExcelMapping.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ServiceExcelMapping.kt; sourceTree = "<group>"; };
+		6955F688307F602F004C9642 /* VolunteerCatalog.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = VolunteerCatalog.kt; sourceTree = "<group>"; };
+		6955F68A307F602F004C9642 /* Center.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Center.kt; sourceTree = "<group>"; };
+		6955F68B307F602F004C9642 /* DonationItem.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DonationItem.kt; sourceTree = "<group>"; };
+		6955F68C307F602F004C9642 /* Orientation.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Orientation.kt; sourceTree = "<group>"; };
+		6955F68D307F602F004C9642 /* ServiceCategory.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ServiceCategory.kt; sourceTree = "<group>"; };
+		6955F68E307F602F004C9642 /* ServiceItem.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ServiceItem.kt; sourceTree = "<group>"; };
+		6955F68F307F602F004C9642 /* VolunteerOpportunity.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = VolunteerOpportunity.kt; sourceTree = "<group>"; };
+		6955F691307F602F004C9642 /* CenterAssetLoader.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CenterAssetLoader.kt; sourceTree = "<group>"; };
+		6955F692307F602F004C9642 /* CenterJsonParser.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CenterJsonParser.kt; sourceTree = "<group>"; };
+		6955F693307F602F004C9642 /* CenterRepository.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CenterRepository.kt; sourceTree = "<group>"; };
+		6955F696307F602F004C9642 /* OrientationEngine.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrientationEngine.kt; sourceTree = "<group>"; };
+		6955F698307F602F004C9642 /* CariVitaBottomBar.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CariVitaBottomBar.kt; sourceTree = "<group>"; };
+		6955F699307F602F004C9642 /* CariVitaTopBar.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CariVitaTopBar.kt; sourceTree = "<group>"; };
+		6955F69A307F602F004C9642 /* CategoryGridItem.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CategoryGridItem.kt; sourceTree = "<group>"; };
+		6955F69B307F602F004C9642 /* CenterCard.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CenterCard.kt; sourceTree = "<group>"; };
+		6955F69C307F602F004C9642 /* DonationItemCard.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DonationItemCard.kt; sourceTree = "<group>"; };
+		6955F69D307F602F004C9642 /* InfoAccordion.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = InfoAccordion.kt; sourceTree = "<group>"; };
+		6955F69E307F602F004C9642 /* ListenButton.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ListenButton.kt; sourceTree = "<group>"; };
+		6955F69F307F602F004C9642 /* OptionCard.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OptionCard.kt; sourceTree = "<group>"; };
+		6955F6A0307F602F004C9642 /* OrientationAnswerButton.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrientationAnswerButton.kt; sourceTree = "<group>"; };
+		6955F6A1307F602F004C9642 /* OrientationProgress.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrientationProgress.kt; sourceTree = "<group>"; };
+		6955F6A2307F602F004C9642 /* PrimaryButton.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PrimaryButton.kt; sourceTree = "<group>"; };
+		6955F6A3307F602F004C9642 /* SecondaryButton.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SecondaryButton.kt; sourceTree = "<group>"; };
+		6955F6A4307F602F004C9642 /* VolunteerOpportunityCard.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = VolunteerOpportunityCard.kt; sourceTree = "<group>"; };
+		6955F6A6307F602F004C9642 /* DisplayFormat.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DisplayFormat.kt; sourceTree = "<group>"; };
+		6955F6A8307F602F004C9642 /* CariVitaIntents.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CariVitaIntents.kt; sourceTree = "<group>"; };
+		6955F6AA307F602F004C9642 /* CariVitaDestinations.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CariVitaDestinations.kt; sourceTree = "<group>"; };
+		6955F6AB307F602F004C9642 /* CariVitaNavHost.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CariVitaNavHost.kt; sourceTree = "<group>"; };
+		6955F6AD307F602F004C9642 /* CategoryScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CategoryScreen.kt; sourceTree = "<group>"; };
+		6955F6AF307F602F004C9642 /* CenterDetailScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CenterDetailScreen.kt; sourceTree = "<group>"; };
+		6955F6B1307F602F004C9642 /* CentersScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CentersScreen.kt; sourceTree = "<group>"; };
+		6955F6B3307F602F004C9642 /* CollaborateScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CollaborateScreen.kt; sourceTree = "<group>"; };
+		6955F6B5307F602F004C9642 /* DonationScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DonationScreen.kt; sourceTree = "<group>"; };
+		6955F6B7307F602F004C9642 /* DonationItemDetailScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DonationItemDetailScreen.kt; sourceTree = "<group>"; };
+		6955F6B9307F602F004C9642 /* HelpScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = HelpScreen.kt; sourceTree = "<group>"; };
+		6955F6BB307F602F004C9642 /* HomeScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = HomeScreen.kt; sourceTree = "<group>"; };
+		6955F6BD307F602F004C9642 /* LocationChoiceScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LocationChoiceScreen.kt; sourceTree = "<group>"; };
+		6955F6BF307F602F004C9642 /* MapPlaceholderScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MapPlaceholderScreen.kt; sourceTree = "<group>"; };
+		6955F6C1307F602F004C9642 /* OrientationFlowScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrientationFlowScreen.kt; sourceTree = "<group>"; };
+		6955F6C2307F602F004C9642 /* OrientationQuestionScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrientationQuestionScreen.kt; sourceTree = "<group>"; };
+		6955F6C3307F602F004C9642 /* OrientationResultScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrientationResultScreen.kt; sourceTree = "<group>"; };
+		6955F6C5307F602F004C9642 /* PlaceholderScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlaceholderScreen.kt; sourceTree = "<group>"; };
+		6955F6C7307F602F004C9642 /* ServiceDetailScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ServiceDetailScreen.kt; sourceTree = "<group>"; };
+		6955F6C9307F602F004C9642 /* ServicesScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ServicesScreen.kt; sourceTree = "<group>"; };
+		6955F6CB307F602F004C9642 /* VolunteerOpportunityDetailScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = VolunteerOpportunityDetailScreen.kt; sourceTree = "<group>"; };
+		6955F6CD307F602F004C9642 /* VolunteerApplicationInfoScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = VolunteerApplicationInfoScreen.kt; sourceTree = "<group>"; };
+		6955F6CF307F602F004C9642 /* WelcomeScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = WelcomeScreen.kt; sourceTree = "<group>"; };
+		6955F6D1307F602F004C9642 /* ZoneSelectionScreen.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ZoneSelectionScreen.kt; sourceTree = "<group>"; };
+		6955F6D4307F602F004C9642 /* Color.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Color.kt; sourceTree = "<group>"; };
+		6955F6D5307F602F004C9642 /* Theme.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Theme.kt; sourceTree = "<group>"; };
+		6955F6D6307F602F004C9642 /* Type.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Type.kt; sourceTree = "<group>"; };
+		6955F6D9307F602F004C9642 /* MainActivity.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MainActivity.kt; sourceTree = "<group>"; };
+		6955F6DE307F602F004C9642 /* rules.keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = rules.keep; sourceTree = "<group>"; };
+		6955F6E0307F602F004C9642 /* ic_launcher_background.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ic_launcher_background.xml; sourceTree = "<group>"; };
+		6955F6E1307F602F004C9642 /* ic_launcher_foreground.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ic_launcher_foreground.xml; sourceTree = "<group>"; };
+		6955F6E3307F602F004C9642 /* ic_launcher.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ic_launcher.xml; sourceTree = "<group>"; };
+		6955F6E4307F602F004C9642 /* ic_launcher_round.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ic_launcher_round.xml; sourceTree = "<group>"; };
+		6955F6E6307F602F004C9642 /* ic_launcher.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ic_launcher.webp; sourceTree = "<group>"; };
+		6955F6E7307F602F004C9642 /* ic_launcher_round.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ic_launcher_round.webp; sourceTree = "<group>"; };
+		6955F6E9307F602F004C9642 /* ic_launcher.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ic_launcher.webp; sourceTree = "<group>"; };
+		6955F6EA307F602F004C9642 /* ic_launcher_round.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ic_launcher_round.webp; sourceTree = "<group>"; };
+		6955F6EC307F602F004C9642 /* ic_launcher.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ic_launcher.webp; sourceTree = "<group>"; };
+		6955F6ED307F602F004C9642 /* ic_launcher_round.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ic_launcher_round.webp; sourceTree = "<group>"; };
+		6955F6EF307F602F004C9642 /* ic_launcher.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ic_launcher.webp; sourceTree = "<group>"; };
+		6955F6F0307F602F004C9642 /* ic_launcher_round.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ic_launcher_round.webp; sourceTree = "<group>"; };
+		6955F6F2307F602F004C9642 /* ic_launcher.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ic_launcher.webp; sourceTree = "<group>"; };
+		6955F6F3307F602F004C9642 /* ic_launcher_round.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ic_launcher_round.webp; sourceTree = "<group>"; };
+		6955F6F5307F602F004C9642 /* strings.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = strings.xml; sourceTree = "<group>"; };
+		6955F6F6307F602F004C9642 /* themes.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = themes.xml; sourceTree = "<group>"; };
+		6955F6F8307F602F004C9642 /* backup_rules.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = backup_rules.xml; sourceTree = "<group>"; };
+		6955F6F9307F602F004C9642 /* data_extraction_rules.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = data_extraction_rules.xml; sourceTree = "<group>"; };
+		6955F6FC307F602F004C9642 /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		6955F6FE307F602F004C9642 /* CentersSpeakableTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CentersSpeakableTest.kt; sourceTree = "<group>"; };
+		6955F6FF307F602F004C9642 /* ListenActionTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ListenActionTest.kt; sourceTree = "<group>"; };
+		6955F700307F602F004C9642 /* SpeakableTextTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SpeakableTextTest.kt; sourceTree = "<group>"; };
+		6955F702307F602F004C9642 /* ExternalFormsConfigTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ExternalFormsConfigTest.kt; sourceTree = "<group>"; };
+		6955F704307F602F004C9642 /* DonationCatalogTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DonationCatalogTest.kt; sourceTree = "<group>"; };
+		6955F705307F602F004C9642 /* ServiceCatalogTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ServiceCatalogTest.kt; sourceTree = "<group>"; };
+		6955F706307F602F004C9642 /* VolunteerCatalogTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = VolunteerCatalogTest.kt; sourceTree = "<group>"; };
+		6955F708307F602F004C9642 /* CenterJsonParserTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CenterJsonParserTest.kt; sourceTree = "<group>"; };
+		6955F709307F602F004C9642 /* CenterRepositoryTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CenterRepositoryTest.kt; sourceTree = "<group>"; };
+		6955F70C307F602F004C9642 /* OrientationEngineTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrientationEngineTest.kt; sourceTree = "<group>"; };
+		6955F70E307F602F004C9642 /* DisplayFormatTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DisplayFormatTest.kt; sourceTree = "<group>"; };
+		6955F710307F602F004C9642 /* VolunteerApplicationInfoSpeakableTextTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = VolunteerApplicationInfoSpeakableTextTest.kt; sourceTree = "<group>"; };
+		6955F714307F602F004C9642 /* ExampleUnitTest.kt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ExampleUnitTest.kt; sourceTree = "<group>"; };
+		6955F71B307F602F004C9642 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		6955F71C307F602F004C9642 /* build.gradle.kts */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.gradle.kts; sourceTree = "<group>"; };
+		6955F71E307F602F004C9642 /* BD_CARITAS_PARROQUIALES.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = BD_CARITAS_PARROQUIALES.xlsx; sourceTree = "<group>"; };
+		6955F720307F602F004C9642 /* Cari_Vita_UI_Aprobada.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Cari_Vita_UI_Aprobada.pdf; sourceTree = "<group>"; };
+		6955F723307F602F004C9642 /* gradle-wrapper.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "gradle-wrapper.jar"; sourceTree = "<group>"; };
+		6955F724307F602F004C9642 /* gradle-wrapper.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "gradle-wrapper.properties"; sourceTree = "<group>"; };
+		6955F726307F602F004C9642 /* gradle-daemon-jvm.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "gradle-daemon-jvm.properties"; sourceTree = "<group>"; };
+		6955F727307F602F004C9642 /* libs.versions.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = libs.versions.toml; sourceTree = "<group>"; };
+		6955F729307F602F004C9642 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		6955F72A307F602F004C9642 /* build.gradle.kts */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.gradle.kts; sourceTree = "<group>"; };
+		6955F72B307F602F004C9642 /* gradle.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = gradle.properties; sourceTree = "<group>"; };
+		6955F72C307F602F004C9642 /* gradlew */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = gradlew; sourceTree = "<group>"; };
+		6955F72D307F602F004C9642 /* gradlew.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = gradlew.bat; sourceTree = "<group>"; };
+		6955F72E307F602F004C9642 /* settings.gradle.kts */ = {isa = PBXFileReference; lastKnownFileType = text; path = settings.gradle.kts; sourceTree = "<group>"; };
+		6955F731307F602F004C9642 /* Cari Vita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cari Vita.png"; sourceTree = "<group>"; };
+		6955F733307F602F004C9642 /* CARI Vita.docx.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CARI Vita.docx.pdf"; sourceTree = "<group>"; };
 		69563295303F542A0034057E /* CaritasApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaritasApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -23,15 +141,778 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6955F736307F6030004C9642 /* gradle-wrapper.jar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6955F674307F602F004C9642 /* carivita */ = {
+			isa = PBXGroup;
+			children = (
+				6955F673307F602F004C9642 /* ExampleInstrumentedTest.kt */,
+			);
+			path = carivita;
+			sourceTree = "<group>";
+		};
+		6955F675307F602F004C9642 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				6955F674307F602F004C9642 /* carivita */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+		6955F676307F602F004C9642 /* com */ = {
+			isa = PBXGroup;
+			children = (
+				6955F675307F602F004C9642 /* example */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		6955F677307F602F004C9642 /* java */ = {
+			isa = PBXGroup;
+			children = (
+				6955F676307F602F004C9642 /* com */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		6955F678307F602F004C9642 /* androidTest */ = {
+			isa = PBXGroup;
+			children = (
+				6955F677307F602F004C9642 /* java */,
+			);
+			path = androidTest;
+			sourceTree = "<group>";
+		};
+		6955F67A307F602F004C9642 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				6955F679307F602F004C9642 /* centers.json */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		6955F680307F602F004C9642 /* accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				6955F67B307F602F004C9642 /* CariVitaTtsController.kt */,
+				6955F67C307F602F004C9642 /* CentersSpeakable.kt */,
+				6955F67D307F602F004C9642 /* ListenAction.kt */,
+				6955F67E307F602F004C9642 /* LocalCariVitaTts.kt */,
+				6955F67F307F602F004C9642 /* SpeakableText.kt */,
+			);
+			path = accessibility;
+			sourceTree = "<group>";
+		};
+		6955F682307F602F004C9642 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				6955F681307F602F004C9642 /* ExternalFormsConfig.kt */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		6955F689307F602F004C9642 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				6955F683307F602F004C9642 /* DonationCatalog.kt */,
+				6955F684307F602F004C9642 /* ExcelServiceCatalog.kt */,
+				6955F685307F602F004C9642 /* OrientationCatalog.kt */,
+				6955F686307F602F004C9642 /* ServiceCatalog.kt */,
+				6955F687307F602F004C9642 /* ServiceExcelMapping.kt */,
+				6955F688307F602F004C9642 /* VolunteerCatalog.kt */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
+		6955F690307F602F004C9642 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6955F68A307F602F004C9642 /* Center.kt */,
+				6955F68B307F602F004C9642 /* DonationItem.kt */,
+				6955F68C307F602F004C9642 /* Orientation.kt */,
+				6955F68D307F602F004C9642 /* ServiceCategory.kt */,
+				6955F68E307F602F004C9642 /* ServiceItem.kt */,
+				6955F68F307F602F004C9642 /* VolunteerOpportunity.kt */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6955F694307F602F004C9642 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				6955F691307F602F004C9642 /* CenterAssetLoader.kt */,
+				6955F692307F602F004C9642 /* CenterJsonParser.kt */,
+				6955F693307F602F004C9642 /* CenterRepository.kt */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		6955F695307F602F004C9642 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				6955F689307F602F004C9642 /* mock */,
+				6955F690307F602F004C9642 /* model */,
+				6955F694307F602F004C9642 /* repository */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		6955F697307F602F004C9642 /* orientation */ = {
+			isa = PBXGroup;
+			children = (
+				6955F696307F602F004C9642 /* OrientationEngine.kt */,
+			);
+			path = orientation;
+			sourceTree = "<group>";
+		};
+		6955F6A5307F602F004C9642 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				6955F698307F602F004C9642 /* CariVitaBottomBar.kt */,
+				6955F699307F602F004C9642 /* CariVitaTopBar.kt */,
+				6955F69A307F602F004C9642 /* CategoryGridItem.kt */,
+				6955F69B307F602F004C9642 /* CenterCard.kt */,
+				6955F69C307F602F004C9642 /* DonationItemCard.kt */,
+				6955F69D307F602F004C9642 /* InfoAccordion.kt */,
+				6955F69E307F602F004C9642 /* ListenButton.kt */,
+				6955F69F307F602F004C9642 /* OptionCard.kt */,
+				6955F6A0307F602F004C9642 /* OrientationAnswerButton.kt */,
+				6955F6A1307F602F004C9642 /* OrientationProgress.kt */,
+				6955F6A2307F602F004C9642 /* PrimaryButton.kt */,
+				6955F6A3307F602F004C9642 /* SecondaryButton.kt */,
+				6955F6A4307F602F004C9642 /* VolunteerOpportunityCard.kt */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		6955F6A7307F602F004C9642 /* format */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6A6307F602F004C9642 /* DisplayFormat.kt */,
+			);
+			path = format;
+			sourceTree = "<group>";
+		};
+		6955F6A9307F602F004C9642 /* intent */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6A8307F602F004C9642 /* CariVitaIntents.kt */,
+			);
+			path = intent;
+			sourceTree = "<group>";
+		};
+		6955F6AC307F602F004C9642 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6AA307F602F004C9642 /* CariVitaDestinations.kt */,
+				6955F6AB307F602F004C9642 /* CariVitaNavHost.kt */,
+			);
+			path = navigation;
+			sourceTree = "<group>";
+		};
+		6955F6AE307F602F004C9642 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6AD307F602F004C9642 /* CategoryScreen.kt */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		6955F6B0307F602F004C9642 /* centerdetail */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6AF307F602F004C9642 /* CenterDetailScreen.kt */,
+			);
+			path = centerdetail;
+			sourceTree = "<group>";
+		};
+		6955F6B2307F602F004C9642 /* centers */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6B1307F602F004C9642 /* CentersScreen.kt */,
+			);
+			path = centers;
+			sourceTree = "<group>";
+		};
+		6955F6B4307F602F004C9642 /* collaborate */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6B3307F602F004C9642 /* CollaborateScreen.kt */,
+			);
+			path = collaborate;
+			sourceTree = "<group>";
+		};
+		6955F6B6307F602F004C9642 /* donation */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6B5307F602F004C9642 /* DonationScreen.kt */,
+			);
+			path = donation;
+			sourceTree = "<group>";
+		};
+		6955F6B8307F602F004C9642 /* donationdetail */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6B7307F602F004C9642 /* DonationItemDetailScreen.kt */,
+			);
+			path = donationdetail;
+			sourceTree = "<group>";
+		};
+		6955F6BA307F602F004C9642 /* help */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6B9307F602F004C9642 /* HelpScreen.kt */,
+			);
+			path = help;
+			sourceTree = "<group>";
+		};
+		6955F6BC307F602F004C9642 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6BB307F602F004C9642 /* HomeScreen.kt */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		6955F6BE307F602F004C9642 /* locationchoice */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6BD307F602F004C9642 /* LocationChoiceScreen.kt */,
+			);
+			path = locationchoice;
+			sourceTree = "<group>";
+		};
+		6955F6C0307F602F004C9642 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6BF307F602F004C9642 /* MapPlaceholderScreen.kt */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		6955F6C4307F602F004C9642 /* orientation */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6C1307F602F004C9642 /* OrientationFlowScreen.kt */,
+				6955F6C2307F602F004C9642 /* OrientationQuestionScreen.kt */,
+				6955F6C3307F602F004C9642 /* OrientationResultScreen.kt */,
+			);
+			path = orientation;
+			sourceTree = "<group>";
+		};
+		6955F6C6307F602F004C9642 /* placeholder */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6C5307F602F004C9642 /* PlaceholderScreen.kt */,
+			);
+			path = placeholder;
+			sourceTree = "<group>";
+		};
+		6955F6C8307F602F004C9642 /* servicedetail */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6C7307F602F004C9642 /* ServiceDetailScreen.kt */,
+			);
+			path = servicedetail;
+			sourceTree = "<group>";
+		};
+		6955F6CA307F602F004C9642 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6C9307F602F004C9642 /* ServicesScreen.kt */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		6955F6CC307F602F004C9642 /* volunteer */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6CB307F602F004C9642 /* VolunteerOpportunityDetailScreen.kt */,
+			);
+			path = volunteer;
+			sourceTree = "<group>";
+		};
+		6955F6CE307F602F004C9642 /* volunteerapplication */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6CD307F602F004C9642 /* VolunteerApplicationInfoScreen.kt */,
+			);
+			path = volunteerapplication;
+			sourceTree = "<group>";
+		};
+		6955F6D0307F602F004C9642 /* welcome */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6CF307F602F004C9642 /* WelcomeScreen.kt */,
+			);
+			path = welcome;
+			sourceTree = "<group>";
+		};
+		6955F6D2307F602F004C9642 /* zoneselection */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6D1307F602F004C9642 /* ZoneSelectionScreen.kt */,
+			);
+			path = zoneselection;
+			sourceTree = "<group>";
+		};
+		6955F6D3307F602F004C9642 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6AE307F602F004C9642 /* category */,
+				6955F6B0307F602F004C9642 /* centerdetail */,
+				6955F6B2307F602F004C9642 /* centers */,
+				6955F6B4307F602F004C9642 /* collaborate */,
+				6955F6B6307F602F004C9642 /* donation */,
+				6955F6B8307F602F004C9642 /* donationdetail */,
+				6955F6BA307F602F004C9642 /* help */,
+				6955F6BC307F602F004C9642 /* home */,
+				6955F6BE307F602F004C9642 /* locationchoice */,
+				6955F6C0307F602F004C9642 /* map */,
+				6955F6C4307F602F004C9642 /* orientation */,
+				6955F6C6307F602F004C9642 /* placeholder */,
+				6955F6C8307F602F004C9642 /* servicedetail */,
+				6955F6CA307F602F004C9642 /* services */,
+				6955F6CC307F602F004C9642 /* volunteer */,
+				6955F6CE307F602F004C9642 /* volunteerapplication */,
+				6955F6D0307F602F004C9642 /* welcome */,
+				6955F6D2307F602F004C9642 /* zoneselection */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		6955F6D7307F602F004C9642 /* theme */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6D4307F602F004C9642 /* Color.kt */,
+				6955F6D5307F602F004C9642 /* Theme.kt */,
+				6955F6D6307F602F004C9642 /* Type.kt */,
+			);
+			path = theme;
+			sourceTree = "<group>";
+		};
+		6955F6D8307F602F004C9642 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6A5307F602F004C9642 /* components */,
+				6955F6A7307F602F004C9642 /* format */,
+				6955F6A9307F602F004C9642 /* intent */,
+				6955F6AC307F602F004C9642 /* navigation */,
+				6955F6D3307F602F004C9642 /* screens */,
+				6955F6D7307F602F004C9642 /* theme */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		6955F6DA307F602F004C9642 /* carivita */ = {
+			isa = PBXGroup;
+			children = (
+				6955F680307F602F004C9642 /* accessibility */,
+				6955F682307F602F004C9642 /* config */,
+				6955F695307F602F004C9642 /* data */,
+				6955F697307F602F004C9642 /* orientation */,
+				6955F6D8307F602F004C9642 /* ui */,
+				6955F6D9307F602F004C9642 /* MainActivity.kt */,
+			);
+			path = carivita;
+			sourceTree = "<group>";
+		};
+		6955F6DB307F602F004C9642 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6DA307F602F004C9642 /* carivita */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+		6955F6DC307F602F004C9642 /* com */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6DB307F602F004C9642 /* example */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		6955F6DD307F602F004C9642 /* java */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6DC307F602F004C9642 /* com */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		6955F6DF307F602F004C9642 /* keepRules */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6DE307F602F004C9642 /* rules.keep */,
+			);
+			path = keepRules;
+			sourceTree = "<group>";
+		};
+		6955F6E2307F602F004C9642 /* drawable */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6E0307F602F004C9642 /* ic_launcher_background.xml */,
+				6955F6E1307F602F004C9642 /* ic_launcher_foreground.xml */,
+			);
+			path = drawable;
+			sourceTree = "<group>";
+		};
+		6955F6E5307F602F004C9642 /* mipmap-anydpi */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6E3307F602F004C9642 /* ic_launcher.xml */,
+				6955F6E4307F602F004C9642 /* ic_launcher_round.xml */,
+			);
+			path = "mipmap-anydpi";
+			sourceTree = "<group>";
+		};
+		6955F6E8307F602F004C9642 /* mipmap-hdpi */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6E6307F602F004C9642 /* ic_launcher.webp */,
+				6955F6E7307F602F004C9642 /* ic_launcher_round.webp */,
+			);
+			path = "mipmap-hdpi";
+			sourceTree = "<group>";
+		};
+		6955F6EB307F602F004C9642 /* mipmap-mdpi */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6E9307F602F004C9642 /* ic_launcher.webp */,
+				6955F6EA307F602F004C9642 /* ic_launcher_round.webp */,
+			);
+			path = "mipmap-mdpi";
+			sourceTree = "<group>";
+		};
+		6955F6EE307F602F004C9642 /* mipmap-xhdpi */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6EC307F602F004C9642 /* ic_launcher.webp */,
+				6955F6ED307F602F004C9642 /* ic_launcher_round.webp */,
+			);
+			path = "mipmap-xhdpi";
+			sourceTree = "<group>";
+		};
+		6955F6F1307F602F004C9642 /* mipmap-xxhdpi */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6EF307F602F004C9642 /* ic_launcher.webp */,
+				6955F6F0307F602F004C9642 /* ic_launcher_round.webp */,
+			);
+			path = "mipmap-xxhdpi";
+			sourceTree = "<group>";
+		};
+		6955F6F4307F602F004C9642 /* mipmap-xxxhdpi */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6F2307F602F004C9642 /* ic_launcher.webp */,
+				6955F6F3307F602F004C9642 /* ic_launcher_round.webp */,
+			);
+			path = "mipmap-xxxhdpi";
+			sourceTree = "<group>";
+		};
+		6955F6F7307F602F004C9642 /* values */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6F5307F602F004C9642 /* strings.xml */,
+				6955F6F6307F602F004C9642 /* themes.xml */,
+			);
+			path = values;
+			sourceTree = "<group>";
+		};
+		6955F6FA307F602F004C9642 /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6F8307F602F004C9642 /* backup_rules.xml */,
+				6955F6F9307F602F004C9642 /* data_extraction_rules.xml */,
+			);
+			path = xml;
+			sourceTree = "<group>";
+		};
+		6955F6FB307F602F004C9642 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6E2307F602F004C9642 /* drawable */,
+				6955F6E5307F602F004C9642 /* mipmap-anydpi */,
+				6955F6E8307F602F004C9642 /* mipmap-hdpi */,
+				6955F6EB307F602F004C9642 /* mipmap-mdpi */,
+				6955F6EE307F602F004C9642 /* mipmap-xhdpi */,
+				6955F6F1307F602F004C9642 /* mipmap-xxhdpi */,
+				6955F6F4307F602F004C9642 /* mipmap-xxxhdpi */,
+				6955F6F7307F602F004C9642 /* values */,
+				6955F6FA307F602F004C9642 /* xml */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		6955F6FD307F602F004C9642 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				6955F67A307F602F004C9642 /* assets */,
+				6955F6DD307F602F004C9642 /* java */,
+				6955F6DF307F602F004C9642 /* keepRules */,
+				6955F6FB307F602F004C9642 /* res */,
+				6955F6FC307F602F004C9642 /* AndroidManifest.xml */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		6955F701307F602F004C9642 /* accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				6955F6FE307F602F004C9642 /* CentersSpeakableTest.kt */,
+				6955F6FF307F602F004C9642 /* ListenActionTest.kt */,
+				6955F700307F602F004C9642 /* SpeakableTextTest.kt */,
+			);
+			path = accessibility;
+			sourceTree = "<group>";
+		};
+		6955F703307F602F004C9642 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				6955F702307F602F004C9642 /* ExternalFormsConfigTest.kt */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		6955F707307F602F004C9642 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				6955F704307F602F004C9642 /* DonationCatalogTest.kt */,
+				6955F705307F602F004C9642 /* ServiceCatalogTest.kt */,
+				6955F706307F602F004C9642 /* VolunteerCatalogTest.kt */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
+		6955F70A307F602F004C9642 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				6955F708307F602F004C9642 /* CenterJsonParserTest.kt */,
+				6955F709307F602F004C9642 /* CenterRepositoryTest.kt */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		6955F70B307F602F004C9642 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				6955F707307F602F004C9642 /* mock */,
+				6955F70A307F602F004C9642 /* repository */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		6955F70D307F602F004C9642 /* orientation */ = {
+			isa = PBXGroup;
+			children = (
+				6955F70C307F602F004C9642 /* OrientationEngineTest.kt */,
+			);
+			path = orientation;
+			sourceTree = "<group>";
+		};
+		6955F70F307F602F004C9642 /* format */ = {
+			isa = PBXGroup;
+			children = (
+				6955F70E307F602F004C9642 /* DisplayFormatTest.kt */,
+			);
+			path = format;
+			sourceTree = "<group>";
+		};
+		6955F711307F602F004C9642 /* volunteerapplication */ = {
+			isa = PBXGroup;
+			children = (
+				6955F710307F602F004C9642 /* VolunteerApplicationInfoSpeakableTextTest.kt */,
+			);
+			path = volunteerapplication;
+			sourceTree = "<group>";
+		};
+		6955F712307F602F004C9642 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				6955F711307F602F004C9642 /* volunteerapplication */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		6955F713307F602F004C9642 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				6955F70F307F602F004C9642 /* format */,
+				6955F712307F602F004C9642 /* screens */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		6955F715307F602F004C9642 /* carivita */ = {
+			isa = PBXGroup;
+			children = (
+				6955F701307F602F004C9642 /* accessibility */,
+				6955F703307F602F004C9642 /* config */,
+				6955F70B307F602F004C9642 /* data */,
+				6955F70D307F602F004C9642 /* orientation */,
+				6955F713307F602F004C9642 /* ui */,
+				6955F714307F602F004C9642 /* ExampleUnitTest.kt */,
+			);
+			path = carivita;
+			sourceTree = "<group>";
+		};
+		6955F716307F602F004C9642 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				6955F715307F602F004C9642 /* carivita */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+		6955F717307F602F004C9642 /* com */ = {
+			isa = PBXGroup;
+			children = (
+				6955F716307F602F004C9642 /* example */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		6955F718307F602F004C9642 /* java */ = {
+			isa = PBXGroup;
+			children = (
+				6955F717307F602F004C9642 /* com */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		6955F719307F602F004C9642 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				6955F718307F602F004C9642 /* java */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		6955F71A307F602F004C9642 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6955F678307F602F004C9642 /* androidTest */,
+				6955F6FD307F602F004C9642 /* main */,
+				6955F719307F602F004C9642 /* test */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		6955F71D307F602F004C9642 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				6955F71A307F602F004C9642 /* src */,
+				6955F71B307F602F004C9642 /* .gitignore */,
+				6955F71C307F602F004C9642 /* build.gradle.kts */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		6955F71F307F602F004C9642 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				6955F71E307F602F004C9642 /* BD_CARITAS_PARROQUIALES.xlsx */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		6955F721307F602F004C9642 /* reference */ = {
+			isa = PBXGroup;
+			children = (
+				6955F720307F602F004C9642 /* Cari_Vita_UI_Aprobada.pdf */,
+			);
+			path = reference;
+			sourceTree = "<group>";
+		};
+		6955F722307F602F004C9642 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				6955F71F307F602F004C9642 /* data */,
+				6955F721307F602F004C9642 /* reference */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		6955F725307F602F004C9642 /* wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				6955F723307F602F004C9642 /* gradle-wrapper.jar */,
+				6955F724307F602F004C9642 /* gradle-wrapper.properties */,
+			);
+			path = wrapper;
+			sourceTree = "<group>";
+		};
+		6955F728307F602F004C9642 /* gradle */ = {
+			isa = PBXGroup;
+			children = (
+				6955F725307F602F004C9642 /* wrapper */,
+				6955F726307F602F004C9642 /* gradle-daemon-jvm.properties */,
+				6955F727307F602F004C9642 /* libs.versions.toml */,
+			);
+			path = gradle;
+			sourceTree = "<group>";
+		};
+		6955F72F307F602F004C9642 /* caritas_front */ = {
+			isa = PBXGroup;
+			children = (
+				6955F71D307F602F004C9642 /* app */,
+				6955F722307F602F004C9642 /* docs */,
+				6955F728307F602F004C9642 /* gradle */,
+				6955F729307F602F004C9642 /* .gitignore */,
+				6955F72A307F602F004C9642 /* build.gradle.kts */,
+				6955F72B307F602F004C9642 /* gradle.properties */,
+				6955F72C307F602F004C9642 /* gradlew */,
+				6955F72D307F602F004C9642 /* gradlew.bat */,
+				6955F72E307F602F004C9642 /* settings.gradle.kts */,
+			);
+			path = caritas_front;
+			sourceTree = "<group>";
+		};
+		6955F730307F602F004C9642 /* Android */ = {
+			isa = PBXGroup;
+			children = (
+				6955F72F307F602F004C9642 /* caritas_front */,
+			);
+			path = Android;
+			sourceTree = "<group>";
+		};
+		6955F732307F602F004C9642 /* Mockups */ = {
+			isa = PBXGroup;
+			children = (
+				6955F731307F602F004C9642 /* Cari Vita.png */,
+			);
+			path = Mockups;
+			sourceTree = "<group>";
+		};
+		6955F734307F602F004C9642 /* SRS */ = {
+			isa = PBXGroup;
+			children = (
+				6955F733307F602F004C9642 /* CARI Vita.docx.pdf */,
+			);
+			path = SRS;
+			sourceTree = "<group>";
+		};
+		6955F735307F602F004C9642 /* Referencias */ = {
+			isa = PBXGroup;
+			children = (
+				6955F730307F602F004C9642 /* Android */,
+				6955F732307F602F004C9642 /* Mockups */,
+				6955F734307F602F004C9642 /* SRS */,
+			);
+			path = Referencias;
+			sourceTree = "<group>";
+		};
 		6956328C303F54290034057E = {
 			isa = PBXGroup;
 			children = (
+				6955F735307F602F004C9642 /* Referencias */,
 				69563297303F542A0034057E /* CaritasApp */,
 				69563296303F542A0034057E /* Products */,
 			);
@@ -260,7 +1141,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.3;
@@ -302,7 +1183,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.3;

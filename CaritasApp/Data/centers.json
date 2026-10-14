@@ -1,0 +1,768 @@
+[
+  {
+    "id": "CP001",
+    "zone": "ZONA CENTRO",
+    "deanery": "Amozoc",
+    "name": "Divino Salvador, Chachapa",
+    "address": "Reforma sur 104 Col. Centro, Chachapa, Puebla Cp.: 72990",
+    "phones": [
+      "2222860667",
+      "2226239143"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "apoyo_psicologico",
+      "cursos_talleres_seminarios",
+      "despensas_banco_alimentos",
+      "despensas_parroquia",
+      "fisioterapia",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/search/parroquia+divino+salvador/@19.0474009,-98.136094,13z/data=!3m1!4b1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP002",
+    "zone": "ZONA CENTRO",
+    "deanery": "Amalucan",
+    "name": "Jesús Buen Pastor",
+    "address": "Av. de las Torres s/n. esq. Enrique García Carreto, Manuel Rivera Anaya 72308, Puebla, Pue.",
+    "phones": [
+      "2226430536",
+      "2227558022"
+    ],
+    "services": [
+      "banco_de_medicamentos",
+      "bazar",
+      "comidas_calientes",
+      "consultas_odontologicas",
+      "cuidado_integral_de_la_creacion",
+      "despensas_banco_alimentos",
+      "despensas_parroquia",
+      "dispensario",
+      "fisioterapia",
+      "otros_beneficios",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/search/jES%C3%9AS+bUEN+pASTOR+amalucan/@19.0581695,-98.1593095,15z?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP003",
+    "zone": "ZONA URBANA",
+    "deanery": "Mayorazgo",
+    "name": "La Divina Providencia, Castillotla",
+    "address": "Antiguo Camino Real a Castillotla, Lomas de Castillotla, 72490, Puebla, Pue.",
+    "phones": [
+      "2222414357"
+    ],
+    "services": [
+      "banco_de_medicamentos",
+      "bazar",
+      "consultas_medicas",
+      "despensas_parroquia",
+      "otros_beneficios",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+la+Divina+Providencia/@18.9846242,-98.2577171,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfb88debf81953:0xee522b8d9e060abf!8m2!3d18.9846191!4d-98.2551422!16s%2Fg%2F1tfrxtyq?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP004",
+    "zone": "ZONA URBANA",
+    "deanery": "María Reina",
+    "name": "María Reina",
+    "address": "Río Bravo # 5730 Col. Jardines de San Manuel, Puebla. Pue. CP.: 72570",
+    "phones": [
+      "2222453875"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "bazar",
+      "despensas_banco_alimentos",
+      "despensas_parroquia",
+      "otros_beneficios"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Mar%C3%ADa+Reina+San+Manuel/@19.0088037,-98.2022209,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfc0a1d4e22f0d:0x4355195aea60eccc!8m2!3d19.0087986!4d-98.199646!16s%2Fg%2F1tdcb46b?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP005",
+    "zone": "ZONA SUR",
+    "deanery": "Atlixco",
+    "name": "Nuestra Señora de Guadalupe",
+    "address": "21 poniente esquina Zaragoza Col. Guadalupe Victoria, Atlixco Cp. 74280",
+    "phones": [
+      "2444456199"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "auxilio_migrantes_y_peregrinos",
+      "banco_de_medicamentos",
+      "bazar",
+      "comidas_calientes",
+      "despensas_banco_alimentos",
+      "despensas_parroquia",
+      "dispensario",
+      "otros_beneficios",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Nuestra+Se%C3%B1ora+de+Guadalupe/@18.8991029,-98.4440802,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfb37f94423959:0xb897eb16b661b6e9!8m2!3d18.8990978!4d-98.4415053!16s%2Fg%2F11cnwf0gqs?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP006",
+    "zone": "ZONA URBANA",
+    "deanery": "Santa Teresita",
+    "name": "Nuestra Señora de la Anunciación",
+    "address": "Estrella del Sur 5115, 72190 Puebla, Pue. (Dentro del fraccionamiento Estrella del Sur)",
+    "phones": [
+      "2222302283"
+    ],
+    "services": [
+      "otros_beneficios"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+Nuestra+Se%C3%B1ora+de+la+Anunciaci%C3%B3n/@19.0388163,-98.2825241,14z/data=!4m10!1m2!2m1!1sEstrella+del+Sur+5115,+72190+Puebla,+Pue.!3m6!1s0x85cfc717ee05558d:0xde483926c9278110!8m2!3d19.0388163!4d-98.2444153!15sCilFc3RyZWxsYSBkZWwgU3VyIDUxMTUsIDcyMTkwIFB1ZWJsYSwgUHVlLlooIiZlc3RyZWxsYSBkZWwgc3VyIDUxMTUgNzIxOTAgcHVlYmxhIHB1ZZIBBnBhcmlzaJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuVFVSQmQyWlVSRlJuRUFF4AEA-gEECHwQOA!16s%2Fg%2F1tgnmdsg?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP007",
+    "zone": "ZONA SUR",
+    "deanery": "Atlixco",
+    "name": "Nuestra Señora de la Asunción, Acapetlahuacan",
+    "address": "Ex Convento de San Francisco, Circunvalación Tlaloc # 4 Col. Ricardo Treviño, Acapetlahuacán, Atlixco Cp.: 74200",
+    "phones": [
+      "2444451969",
+      "2444464931"
+    ],
+    "services": [
+      "despensas_banco_alimentos",
+      "despensas_parroquia",
+      "fisioterapia",
+      "otros_beneficios",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/search/Nuestra+se%C3%B1ora+de+la+asunci%C3%B3n/@18.9050096,-98.4507132,15z/data=!3m1!4b1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP008",
+    "zone": "ZONA URBANA",
+    "deanery": "Amozoc",
+    "name": "Nuestra Señora de San Juan de los Lagos",
+    "address": "Guadalajara # 73, San Rafael Poniente, Cp. 72029, Puebla, Pue.",
+    "phones": [
+      "2222243961"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Guadalajara+73,+San+Rafael+Poniente,+72029+Heroica+Puebla+de+Zaragoza,+Pue./@19.0841423,-98.2325381,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfc6b0f8ef90b1:0x8a0e7606175bd094!8m2!3d19.0841372!4d-98.2299632!16s%2Fg%2F11kqd9_88p?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP009",
+    "zone": "ZONA CENTRO",
+    "deanery": "Amozoc",
+    "name": "Nuestra Señora del Destierro, San Aparicio",
+    "address": "Fraternidad Misionera Verbum Dei 5 de mayo s/n   Col. San Sebastián de Aparicio, Puebla, Pue. Cp. 72980",
+    "phones": [
+      "2222220733",
+      "2212738576"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Nuestra+Se%C3%B1ora+del+Destierro/@19.1019495,-98.1630956,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfc18a065a5755:0xc646e3e5852ff09c!8m2!3d19.1019444!4d-98.1605207!16s%2Fg%2F11c6cq1fy1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP010",
+    "zone": "ZONA URBANA",
+    "deanery": "Mayorazgo",
+    "name": "Nuestra Señora del Refugio",
+    "address": "Calle Sonora # 10507 Colonia La Popular Coatepec, Puebla, Pue. Cp. 72470",
+    "phones": [
+      "2227561059"
+    ],
+    "services": [
+      "banco_de_medicamentos",
+      "comidas_calientes",
+      "despensas_banco_alimentos",
+      "despensas_parroquia",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Nuestra+Se%C3%B1ora+del+Refugio/@18.9953531,-98.2405281,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfb8a47feb678b:0x7990c357847ca135!8m2!3d18.995348!4d-98.2379532!16s%2Fg%2F1tjrq9lk?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP011",
+    "zone": "ZONA URBANA",
+    "deanery": "María Reina",
+    "name": "Nuestra Señora del Rosario",
+    "address": "Blvd. 42 sur # 671 U. H. Infonavit la Margarita, Puebla, Pue. CP. 72450",
+    "phones": [
+      "2224265978",
+      "2228633593"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "banco_de_medicamentos",
+      "bazar",
+      "comedores_palafox",
+      "despensas_parroquia",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/search/Blvd.+42+sur+%23+671+U.+H.+Infonavit+la+Margarita,+Puebla,+Pue.+CP.+72450/@19.0032209,-98.2013594,14.75z?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP012",
+    "zone": "ZONA URBANA",
+    "deanery": "Mayorazgo",
+    "name": "Sagrado Corazón de Jesús y San Cayetano",
+    "address": "Calle Iris número 14913, Tercera Sección de San Ramón (con entrada principal por la zona de Gardenias), C.P. 72490, Puebla, Puebla.",
+    "phones": [
+      "2223878641"
+    ],
+    "services": [
+      "banco_de_medicamentos",
+      "bazar",
+      "despensas_banco_alimentos",
+      "despensas_parroquia"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Sagrado+Coraz%C3%B3n+de+Jesus+Y+San+Cayetano/@18.9644798,-98.2633397,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfb8f976150c6f:0x1392f6a66404ef07!8m2!3d18.9644747!4d-98.2607648!16s%2Fg%2F1hm5_cfc8?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP013",
+    "zone": "ZONA PONIENTE",
+    "deanery": "San Andrés Cholula",
+    "name": "San Andrés Apóstol, Cholula",
+    "address": "3 oriente # 2 Col. Centro, San Andrés Cholula Cp.: 72810",
+    "phones": [
+      "2222471219"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Andr%C3%A9s+Ap%C3%B3stol/@19.0503231,-98.2997119,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfc62d3c5809eb:0xf5a4fa6c076bc344!8m2!3d19.0503231!4d-98.2997119!16s%2Fg%2F11f5g361gb?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP014",
+    "zone": "ZONA NORTE",
+    "deanery": "Tlatlauquitepec",
+    "name": "San Andrés Apóstol, Hueyapan",
+    "address": "Calle Ocampo No. 1 Col. Centro Hueyapan, Pue. Cp.: 73920",
+    "phones": [
+      "2313110453"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "auxilio_migrantes_y_peregrinos",
+      "banco_de_medicamentos",
+      "bazar",
+      "comidas_calientes",
+      "consultas_odontologicas",
+      "cursos_talleres_seminarios",
+      "despensas_banco_alimentos",
+      "despensas_parroquia",
+      "dispensario",
+      "fisioterapia",
+      "otros_beneficios",
+      "servicios_eucaristicos_hospitales",
+      "visitas_personas_privadas_libertad"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Andres+Apostol+Hueyapan/@19.8822724,-97.4477142,17z/data=!3m1!4b1!4m6!3m5!1s0x85da94aec6593773:0xad9b65c4e25aedf5!8m2!3d19.8822674!4d-97.4451393!16s%2Fg%2F11cmdhs975?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP015",
+    "zone": "ZONA NORTE",
+    "deanery": "Zapotitlán",
+    "name": "San Andrés Apóstol, Hueytlalpan",
+    "address": "San Andrés No. 2 Col. Centro, Hueytlalpan, Pue.   Cp.: 73430",
+    "phones": [
+      "2333187008"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+San+Andr%C3%A9s/@20.0273184,-97.69917,17z/data=!3m1!4b1!4m6!3m5!1s0x85da8478c6584fd1:0x361b9744e4c48814!8m2!3d20.0273134!4d-97.6965951!16s%2Fg%2F11c5_09rzj?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP016",
+    "zone": "ZONA URBANA",
+    "deanery": "Mayorazgo",
+    "name": "San Antonio Abad",
+    "address": "105 poniente y Privada B de la 16 de septiembre, Col. Arboledas de Loma Bella, Puebla, Pue. Cp. 72490",
+    "phones": [
+      "2228923227"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Antonio+Abad/@18.9917244,-98.2313093,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfb8b1c5fcf807:0x880b572cddd53f3b!8m2!3d18.9917193!4d-98.2287344!16s%2Fg%2F1pv2l32bf?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP017",
+    "zone": "ZONA NORTE",
+    "deanery": "Zapotitlán",
+    "name": "San Antonio de Padua, San Antonio Tepango",
+    "address": "Calle Principal S/N Col. Centro, Tepango de Rodríguez Cp.: 73370.",
+    "phones": [
+      "7647678438"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Iglesia+de+San+Antonio+Tepango/@20.0035951,-97.8004884,17z/data=!3m1!4b1!4m6!3m5!1s0x85d079355414b855:0xd41c72e3809f57cb!8m2!3d20.0035901!4d-97.7979135!16s%2Fg%2F11fq8kqlsp?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP018",
+    "zone": "ZONA URBANA",
+    "deanery": "María Reina",
+    "name": "San Baltazar, Campeche",
+    "address": "Calle Cué Merlo # 204 Col. San Baltazar Campeche, Puebla, Pue., Cp. 72550",
+    "phones": [
+      "2221279472",
+      "2227945984"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "banco_de_medicamentos",
+      "bazar",
+      "despensas_parroquia"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Baltazar+Campeche/@19.0242465,-98.2119106,17z/data=!4m10!1m2!2m1!1sCalle+Cu%C3%A9+Merlo+%23+204+Col.+San+Baltazar+Campeche,+Puebla,+Pue.,++Cp.+72550!3m6!1s0x85cfc0b9702bc44d:0x5b7f6c286e093d5d!8m2!3d19.0242465!4d-98.207147!15sCktDYWxsZSBDdcOpIE1lcmxvICMgMjA0IENvbC4gU2FuIEJhbHRhemFyIENhbXBlY2hlLCBQdWVibGEsIFB1ZS4sICBDcC4gNzI1NTCSAQ9jYXRob2xpY19jaHVyY2jgAQA!16s%2Fg%2F1whdjprp?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP019",
+    "zone": "ZONA URBANA",
+    "deanery": "María Reina",
+    "name": "San Buenaventura, Nealtican",
+    "address": "Calle Zaragoza # 1 Col. Centro, San Buenaventura Nealtican, Cp. 74300",
+    "phones": [],
+    "services": [
+      "aparatos_ortopedicos",
+      "comidas_calientes",
+      "despensas_banco_alimentos"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Buenaventura/@19.0509062,-98.4313524,17z/data=!4m10!1m2!2m1!1sparroquia+San+Buenaventura+Nealtican!3m6!1s0x85cfcbb10830e03b:0x49dc6c79d2e707d8!8m2!3d19.0509062!4d-98.4265888!15sCiRwYXJyb3F1aWEgU2FuIEJ1ZW5hdmVudHVyYSBOZWFsdGljYW5aJiIkcGFycm9xdWlhIHNhbiBidWVuYXZlbnR1cmEgbmVhbHRpY2FukgEGY2h1cmNomgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJwc1RWcEhVazVOYlVZMFpGUktiRm94U21aWldGSjZWRlJXYUZSdVl4QULgAQD6AQQIABA-!16s%2Fg%2F11c0wf53pl?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP020",
+    "zone": "ZONA SUR",
+    "deanery": "Izúcar de Matamoros",
+    "name": "San Francisco de Asís, Chietla",
+    "address": "Jiménez 7 Centro, 74580, Chietla, Pue.",
+    "phones": [
+      "2434310121",
+      "2491134217"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "bazar",
+      "comedores_palafox",
+      "comidas_calientes",
+      "despensas_banco_alimentos"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+San+Francisco+de+As%C3%ADs,+Chietla,+Puebla/@18.5194859,-98.5801992,17z/data=!3m1!4b1!4m6!3m5!1s0x85cef955deb01ea9:0x98afbc65ee8b7821!8m2!3d18.5194808!4d-98.5776243!16s%2Fg%2F1tdh8sml?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP021",
+    "zone": "ZONA ORIENTE",
+    "deanery": null,
+    "name": "San Jerónimo, Aljojuca",
+    "address": "Av. Independencia No. 4, Tercera Sección, 75180, Aliojuca, Pue.",
+    "phones": [
+      "2491863986",
+      "2451157395"
+    ],
+    "services": [
+      "apoyo_psicologico",
+      "consultas_medicas",
+      "cursos_talleres_seminarios",
+      "dispensario",
+      "estancia_infantil"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Jer%C3%B3nimo/@19.0999464,-97.5340434,17z/data=!3m1!4b1!4m6!3m5!1s0x85c543dc0cfd2a8b:0x64b26013f02481a2!8m2!3d19.0999413!4d-97.5314685!16s%2Fg%2F11c329sb2g?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP022",
+    "zone": "ZONA NORTE",
+    "deanery": "Ahuacatlán",
+    "name": "San José Amixtlán",
+    "address": "Av. 16 de septiembre # 4 Col., Centro, Amixtlán, Pue. Cp.: 72360",
+    "phones": [
+      "7647638053"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Jos%C3%A9/@20.0481664,-97.8005169,18z/data=!3m1!4b1!4m6!3m5!1s0x85d078bbac2bff3f:0x76eda6a74476320d!8m2!3d20.0481639!4d-97.7992294!16s%2Fg%2F11c5b4tk3k?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP023",
+    "zone": "ZONA URBANA",
+    "deanery": "Mayorazgo",
+    "name": "San José Obrero Mayorazgo",
+    "address": "Av. del Trabajo # 35 Col. Mayorazgo, Puebla, Pue. CP.: 72456",
+    "phones": [
+      "2222431139",
+      "2229415063"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Jos%C3%A9+Obrero+Mayorazgo/@19.0200611,-98.2304309,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfc04ee87a6195:0x309ce4f6b18a0c01!8m2!3d19.020056!4d-98.227856!16s%2Fg%2F1ptz42qjy?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP024",
+    "zone": "ZONA ORIENTE",
+    "deanery": "Libres",
+    "name": "San Juan Bautista, Libres",
+    "address": "Constitución No. 3, Centro, 73780, Libres, Pue.",
+    "phones": [
+      "2764730124"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "apoyo_psicologico",
+      "banco_de_medicamentos",
+      "bazar",
+      "consultas_odontologicas",
+      "despensas_parroquia",
+      "dispensario",
+      "fisioterapia",
+      "visitas_personas_privadas_libertad"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Juan+Bautista/@19.4641156,-97.689359,17z/data=!3m1!4b1!4m6!3m5!1s0x85daac654c2e07ef:0xbd263175934435d6!8m2!3d19.4641106!4d-97.6867841!16s%2Fg%2F11c0q_5ftg?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP025",
+    "zone": "ZONA CENTRO",
+    "deanery": "Tecamachalco",
+    "name": "San Juan Evangelista, Acatzingo",
+    "address": "16 de Septiembre 205, Col. Centro, Acatzingo, Puebla, 75150",
+    "phones": [
+      "2491190067",
+      "2491759414"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "apoyo_psicologico",
+      "banco_de_medicamentos",
+      "bazar",
+      "consultas_medicas",
+      "consultas_odontologicas",
+      "despensas_parroquia",
+      "dispensario",
+      "fisioterapia",
+      "otros_beneficios"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Juan+Evangelista/@18.9817278,-97.7866308,17z/data=!3m1!4b1!4m6!3m5!1s0x85c5602a10e4e711:0xacccbec3b0662054!8m2!3d18.9817227!4d-97.7840559!16s%2Fg%2F12cp3pb2_?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP026",
+    "zone": "ZONA CENTRO",
+    "deanery": "Amozoc",
+    "name": "San Luís Guanella",
+    "address": "Religiosos Padres Guanelianos, Calle Maximino Ávila Camacho No. 76, Col. La Preciosa Sangre, Capulac, Amozoc, Cp.: 72920",
+    "phones": [
+      "2222710914",
+      "2221026021"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "asistencia_en_desastres",
+      "auxilio_migrantes_y_peregrinos",
+      "banco_de_medicamentos",
+      "bazar",
+      "despensas_banco_alimentos",
+      "despensas_parroquia",
+      "dispensario",
+      "envio_pacientes_clinica_fundacion",
+      "fisioterapia",
+      "otros_beneficios",
+      "visitas_personas_privadas_libertad"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Domo+San+Luis+Guanela/@19.0607299,-98.0487373,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfec7ff0b2726f:0xd0c59b163cbe00ae!8m2!3d19.0607248!4d-98.0461624!16s%2Fg%2F11c2nhtx9c?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP027",
+    "zone": "ZONA CENTRO",
+    "deanery": "Acajete",
+    "name": "San Marcos Evangelista, Grajales",
+    "address": "Emilio Carranza # 6 (Casa Parroquial 3 sur # 6) Col. Centro, Rafael Lara Grajales Cp.: 75000",
+    "phones": [
+      "2764740065"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "banco_de_medicamentos",
+      "bazar",
+      "consultas_medicas",
+      "dispensario",
+      "otros_beneficios"
+    ],
+    "mapsUrl": "https://www.google.com/maps/search/parroquia+San+Marcos+Evangelista,+Grajales/@19.1361702,-98.1694756,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP028",
+    "zone": "ZONA PONIENTE",
+    "deanery": "Tlalancaleca",
+    "name": "San Matías Apóstol",
+    "address": "Pt. Hidalgo 10 Centro, 74110, San Matías Tlalancaleca, Pue.",
+    "phones": [
+      "2482280961"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "bazar",
+      "consultas_medicas",
+      "despensas_parroquia"
+    ],
+    "mapsUrl": "https://www.google.com/maps/search/San+Mat%C3%ADas+Ap%C3%B3stol,+tlalancaleca+puebla/@19.3238198,-98.4996927,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP029",
+    "zone": "ZONA PONIENTE",
+    "deanery": "Xoxtla",
+    "name": "San Miguel Arcángel",
+    "address": "Plazuela Benito Juárez #19, San Miguel Xoxtla, Puebla, 72620",
+    "phones": [
+      "2222815608"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "apoyo_psicologico",
+      "auxilio_migrantes_y_peregrinos",
+      "banco_de_medicamentos",
+      "despensas_banco_alimentos",
+      "despensas_parroquia"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Miguel+Arcangel+Xoxtla/@19.168072,-98.311577,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfcff566d377fd:0xcb536223d7da7cb8!8m2!3d19.168067!4d-98.3090021!16s%2Fg%2F11cnwdy24f?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP030",
+    "zone": "ZONA PONIENTE",
+    "deanery": "San Pedro Cholula",
+    "name": "San Pedro Cholula",
+    "address": "5 de mayo # 401 Col. Centro, San Pedro Cholula Cp.: 72760",
+    "phones": [
+      "2222470030",
+      "2222472063"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "banco_de_medicamentos",
+      "bazar",
+      "despensas_parroquia",
+      "otros_beneficios",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Pedro+Cholula/@19.0635436,-98.3088079,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfc627026bfc07:0x87777ee213fbe503!8m2!3d19.0635385!4d-98.306233!16s%2Fg%2F11cnwf0gr8?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP031",
+    "zone": "ZONA CENTRO",
+    "deanery": "Tepexi",
+    "name": "Santa Clara de Asís, Huitziltepec",
+    "address": "2 oriente # 5 Barrio de Ánimas, Santa Clara Huitziltepec Cp.: 75640",
+    "phones": [
+      "22242720695"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Santa+Clara+de+Asis/@18.7699064,-97.8827138,17z/data=!3m1!4b1!4m6!3m5!1s0x85cf8425a62c46ab:0xa4406499610a7d73!8m2!3d18.7699013!4d-97.8801389!16s%2Fg%2F11cndbdy9d?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP032",
+    "zone": "ZONA CENTRO",
+    "deanery": "Amozoc",
+    "name": "Santa María de la Asunción",
+    "address": "Plaza de la Constitución # 37, Col. Centro, Amozoc de Mota, Cp. 72980",
+    "phones": [
+      "2222711732",
+      "2222173690"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Templo+Parroquial+Santa+Mar%C3%ADa+De+La+Asunci%C3%B3n/@19.0449304,-98.0472677,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfec9da6cec3f5:0x9a9168fde03c9c08!8m2!3d19.0449253!4d-98.0446928!16s%2Fg%2F11clh2ffbj?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP033",
+    "zone": "ZONA NORTE",
+    "deanery": "Tlatlauquitepec",
+    "name": "Santa María de la Asunción, Tlatlauquitepec",
+    "address": "Av. Reforma 80, Centro, 73900 Tlatlauquitepec, Pue.",
+    "phones": [
+      "2333180500"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "bazar",
+      "despensas_banco_alimentos",
+      "despensas_parroquia",
+      "otros_beneficios",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroqu%C3%ADa+de+Santa+Mar%C3%ADa+de+la+Asunci%C3%B3n/@19.8500978,-97.499899,17z/data=!3m1!4b1!4m6!3m5!1s0x85cf001392db96eb:0x54cea84ffda841fd!8m2!3d19.8500928!4d-97.4973241!16s%2Fg%2F1tdh464f?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP034",
+    "zone": "ZONA NORTE",
+    "deanery": "Ahuacatlán",
+    "name": "Santa María de la Asunción, Tepetzintla",
+    "address": "Calle Benito Juárez s/n Col. Centro, Tepetzintla, Pue.    Cp.: 73310",
+    "phones": [
+      "7975961219"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/search/parroquia+Santa+Mar%C3%ADa+de+la+Asunci%C3%B3n,+Tepetzintla/@19.9089632,-97.8339531,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP035",
+    "zone": "ZONA SUR",
+    "deanery": "Chiautla de Tapia",
+    "name": "Santa María de la Asunción, Tlancualpican",
+    "address": "Leona Vicario # 1 Col. Centro, Tlancualpicán Cp.: 74735",
+    "phones": [
+      "2754314492"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "comidas_calientes",
+      "cursos_talleres_seminarios",
+      "despensas_parroquia",
+      "fisioterapia",
+      "otros_beneficios",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+Santa+Maria+de+la+Asunci%C3%B3n/@18.4298674,-98.7027516,17z/data=!3m1!4b1!4m6!3m5!1s0x85cef100381ef065:0xefc17eaa0fe6c2ae!8m2!3d18.4298623!4d-98.7001767!16s%2Fg%2F11l_9bww4g?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP036",
+    "zone": "ZONA CENTRO",
+    "deanery": "Amozoc",
+    "name": "Santa María de la Natividad, Chachapa",
+    "address": "Plaza de la Constitución # 37 Col. Centro, Amozoc de Mota, Puebla Cp.: 72980",
+    "phones": [
+      "2222711732",
+      "2222173690"
+    ],
+    "services": [],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Santa+Mar%C3%ADa+de+La+Natividad/@19.08803,-98.1072342,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfea3bc6f6b7ff:0x72bd2044e119e230!8m2!3d19.0880249!4d-98.1046593!16s%2Fg%2F11cmsq95pl?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP037",
+    "zone": "ZONA ORIENTE",
+    "deanery": "Libres",
+    "name": "Santa María de la Natividad, Cuyuaco",
+    "address": "Hidalgo # 1 Col. Centro, Cuyoaco, Pue. Cp.: 73980",
+    "phones": [
+      "2764770684"
+    ],
+    "services": [
+      "banco_de_medicamentos",
+      "despensas_banco_alimentos",
+      "despensas_parroquia",
+      "dispensario",
+      "servicios_eucaristicos_hospitales"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Santa+Mar%C3%ADa+de+la+Natividad+Cuyoaco/@19.6054953,-97.6233724,17z/data=!3m1!4b1!4m6!3m5!1s0x85daa5420da1a675:0x72fa5d36c2820bbc!8m2!3d19.6054903!4d-97.6207975!16s%2Fg%2F11jt8kyg1r?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP038",
+    "zone": "ZONA NORTE",
+    "deanery": "Zacapoaxtla",
+    "name": "Santa María de la Natividad, Nauzontla",
+    "address": "Calle Francisco I Madero No. 39, Col. Centro, Nauzontla   Cp.: 73550",
+    "phones": [
+      "2223107304"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "cuidado_integral_de_la_creacion",
+      "envio_pacientes_clinica_fundacion",
+      "otros_beneficios"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Santa+Mar%C3%ADa+de+la+Natividad/@19.9606179,-97.6049962,17z/data=!3m1!4b1!4m6!3m5!1s0x85da900e784157f5:0xd08671386d9d378e!8m2!3d19.9606129!4d-97.6024213!16s%2Fg%2F11g6px61cj?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP039",
+    "zone": "ZONA NORTE",
+    "deanery": "Zapotitlán",
+    "name": "Santiago Apóstol, Huitzilan de Serdán",
+    "address": "Refugio S. Carmona 447, Cuarta Sección, 73450 Huitzilan, Pue.",
+    "phones": [
+      "2761034582",
+      "2222159799"
+    ],
+    "services": [
+      "banco_de_medicamentos",
+      "otros_beneficios"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/PARROQUIA+DE+SANTIAGO+APOSTOL/@19.9669306,-97.6960837,17z/data=!3m1!4b1!4m6!3m5!1s0x85da9b56a585a0bd:0x87b59e32a3fdcb1e!8m2!3d19.9669256!4d-97.6935088!16s%2Fg%2F11c5zs60k5?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP040",
+    "zone": "ZONA CENTRO",
+    "deanery": null,
+    "name": "Santo Tomás de Aquino, Tlapanalá",
+    "address": "Calle Mercaderes # 8, Centro., Tlapanalá 74540",
+    "phones": [
+      "2444414413"
+    ],
+    "services": [
+      "banco_de_medicamentos",
+      "dispensario",
+      "otros_beneficios"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+Santo+Tom%C3%A1s+de+Aquino/@18.6957098,-98.5391565,17z/data=!3m1!4b1!4m6!3m5!1s0x85ce553132bdbbb1:0xf73627849802e5f2!8m2!3d18.6957047!4d-98.5365816!16s%2Fg%2F11fm3msm39?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP041",
+    "zone": null,
+    "deanery": null,
+    "name": "San Isidro Labrador, Granjas de San Isidro",
+    "address": "14 Sur S/N, Col. San Isidro, Cp. 72590",
+    "phones": [
+      "2222239103",
+      "2223689103"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "banco_de_medicamentos",
+      "dispensario"
+    ],
+    "mapsUrl": "https://www.google.com/maps/search/parroquia+san+isidro+labrador/@19.0410002,-98.2412629,13z?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP042",
+    "zone": null,
+    "deanery": null,
+    "name": "San Rafael Arcángel, Tlanalapan",
+    "address": "Av. Nacional esq. 5 de mayo, San Rafael, Tlanalapan, Puebla",
+    "phones": [
+      "2481966833",
+      "2481331022"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "apoyo_psicologico",
+      "banco_de_medicamentos",
+      "consultas_medicas",
+      "dispensario",
+      "fisioterapia",
+      "otros_beneficios"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Rafael+Arcangel+Tlanalapan/@19.2954447,-98.4685727,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfd4be9a0da56d:0xde75b0d5f565be98!8m2!3d19.2954397!4d-98.4659978!16s%2Fg%2F11c45c8807?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP043",
+    "zone": null,
+    "deanery": null,
+    "name": "Nuestra Señora de Guadalupe, Xaltipan",
+    "address": "Calle Antonio Julián Zapata, Esquina con Calle Guadalupana., 73972",
+    "phones": [
+      "2288266513",
+      "2312811602"
+    ],
+    "services": [
+      "aparatos_ortopedicos",
+      "asistencia_en_desastres",
+      "bazar",
+      "despensas_parroquia",
+      "envio_pacientes_clinica_fundacion",
+      "servicios_eucaristicos_hospitales",
+      "visitas_personas_privadas_libertad"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/La+Guadalupana+%26+Antonio+Juli%C3%A1n+Zapata,+D%C3%A9cima,+73972+Xaltipan,+Pue./@19.7634967,-97.3362481,17z/data=!3m1!4b1!4m6!3m5!1s0x85dac23763a39d37:0xcc77705e3e285c3!8m2!3d19.7634917!4d-97.3336732!16s%2Fg%2F11gd_3__88?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "CP044",
+    "zone": null,
+    "deanery": null,
+    "name": "Nuestra Señora de la Esperanza",
+    "address": "Calle 7 Norte No. 42, Primera Sección, Cp 75560 Esperanza, Pue. México",
+    "phones": [
+      "2451067500",
+      "2451073477"
+    ],
+    "services": [
+      "despensas_banco_alimentos"
+    ],
+    "mapsUrl": "https://www.google.com/maps/place/Parroquia+De+Nuestra+Se%C3%B1ora+De+La+Esperanza/@18.8618197,-97.3774866,834m/data=!3m2!1e3!4b1!4m6!3m5!1s0x85c51272378b3137:0x5cc374afc83492b7!8m2!3d18.8618197!4d-97.3774866!16s%2Fg%2F11c4cv2dkc?hl=es-419&entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D"
+  }
+]
