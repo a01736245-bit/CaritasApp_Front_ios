@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct CaritasAppApp: App {
+    @State private var hasStarted = false
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if hasStarted {
+                AppTabView()
+            } else {
+                WelcomeView(onEmpezar: { hasStarted = true })
+            }
         }
     }
 }

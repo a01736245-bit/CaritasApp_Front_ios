@@ -1,7 +1,6 @@
 import SwiftUI
 
-// Paleta CARI Vita. Valores extraídos de Android Color.kt (Cari_Vita_UI_Aprobada.pdf).
-// Referencia Android: 0xFFRRGGBB → Color(red: RR/255, green: GG/255, blue: BB/255)
+// Paleta de colores de CARI Vita.
 
 extension Color {
 
