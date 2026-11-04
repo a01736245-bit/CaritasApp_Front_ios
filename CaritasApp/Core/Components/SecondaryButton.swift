@@ -9,6 +9,8 @@ struct SecondaryButton: View {
             Text(title)
                 .font(CariTypography.labelLarge)
                 .foregroundStyle(Color.cariNavy)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 8)
                 .frame(maxWidth: .infinity)
                 .frame(height: 56)
                 .overlay(

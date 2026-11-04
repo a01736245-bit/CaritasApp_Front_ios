@@ -37,3 +37,13 @@ xcuserdata/
 
 # Ignorar documentos de referencia
 Referencias/
+
+# Ignorar archivos Markdown
+*.md
+*.MD
+
+# Ignorar referencias de Android y documentación
+Referencias/
+
+# Ignorar archivos temporales de macOS
+.DS_Store
