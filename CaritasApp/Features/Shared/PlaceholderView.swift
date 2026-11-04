@@ -2,10 +2,11 @@ import SwiftUI
 
 struct PlaceholderView: View {
     let title: String
+    var onBack: (() -> Void)? = nil
 
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar()
+            CariTopBar(onBack: onBack)
 
             Spacer()
 

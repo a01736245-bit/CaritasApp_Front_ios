@@ -30,3 +30,10 @@ xcuserdata/
 .env.*
 *.p12
 *.mobileprovision
+
+# Ignorar archivos Markdown
+*.md
+*.MD
+
+# Ignorar documentos de referencia
+Referencias/

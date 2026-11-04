@@ -14,8 +14,10 @@ struct CariTopBar: View {
                             .scaledToFit()
                             .frame(width: 24, height: 24)
                             .foregroundStyle(Color.cariNavy)
+                            .frame(width: 52, height: 52)
+                            .contentShape(Rectangle())
                     }
-                    .frame(width: 52, height: 52)
+                    .accessibilityLabel("Atrás")
                 } else {
                     Spacer()
                         .frame(width: 52, height: 52)

@@ -18,6 +18,7 @@ enum CollaborateSection {
 struct AppTabView: View {
     @State private var selectedTab: AppTab = .inicio
     @State private var collaborateSection: CollaborateSection = .voluntariado
+    @State private var servicesPath: [ServicesRoute] = []
 
     init() {
         #if canImport(UIKit)
@@ -32,6 +33,7 @@ struct AppTabView: View {
                 NavigationStack {
                     HomeView(
                         onNecesitoAyuda: {
+                            servicesPath = []
                             selectedTab = .servicios
                         },
                         onUnirmeAlEquipo: {
@@ -48,10 +50,10 @@ struct AppTabView: View {
             }
 
             Tab("Servicios", systemImage: "square.grid.2x2", value: AppTab.servicios) {
-                NavigationStack {
-                    PlaceholderView(title: "Servicios")
-                }
-                .withHiddenNavigationBar()
+                ServicesFlowView(
+                    path: $servicesPath,
+                    onExitToHome: { selectedTab = .inicio }
+                )
             }
 
             Tab("Colaborar", systemImage: "hands.sparkles", value: AppTab.colaborar) {
@@ -76,7 +78,7 @@ struct AppTabView: View {
     }
 }
 
-private extension View {
+extension View {
     @ViewBuilder
     func withHiddenNavigationBar() -> some View {
         #if os(iOS)
