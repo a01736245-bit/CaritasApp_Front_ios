@@ -19,6 +19,7 @@ struct AppTabView: View {
     @State private var selectedTab: AppTab = .inicio
     @State private var collaborateSection: CollaborateSection = .voluntariado
     @State private var servicesPath: [ServicesRoute] = []
+    @State private var collaboratePath: [CollaborateRoute] = []
 
     init() {
         #if canImport(UIKit)
@@ -38,10 +39,12 @@ struct AppTabView: View {
                         },
                         onUnirmeAlEquipo: {
                             collaborateSection = .voluntariado
+                            collaboratePath = []
                             selectedTab = .colaborar
                         },
                         onQuieroDonar: {
                             collaborateSection = .donaciones
+                            collaboratePath = []
                             selectedTab = .colaborar
                         }
                     )
@@ -57,10 +60,11 @@ struct AppTabView: View {
             }
 
             Tab("Colaborar", systemImage: "hands.sparkles", value: AppTab.colaborar) {
-                NavigationStack {
-                    PlaceholderView(title: "Colaborar")
-                }
-                .withHiddenNavigationBar()
+                CollaborateFlowView(
+                    path: $collaboratePath,
+                    section: $collaborateSection,
+                    onExitToHome: { selectedTab = .inicio }
+                )
             }
 
             Tab("Ayuda", systemImage: "questionmark.circle", value: AppTab.ayuda) {

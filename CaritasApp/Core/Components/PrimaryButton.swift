@@ -17,7 +17,9 @@ struct PrimaryButton: View {
                 }
                 Text(title)
                     .font(CariTypography.labelLarge)
+                    .multilineTextAlignment(.center)
             }
+            .padding(.horizontal, 8)
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .frame(height: 60)
