@@ -1,33 +1,49 @@
 import Foundation
 
-/// Oportunidades de voluntariado. Solo "Apoyo en el comedor" tiene información
-/// de detalle confirmada; las otras dos muestran únicamente descripción y horario.
+/// Oportunidades de voluntariado. Los detalles (descripción, lugar, horario, actividades,
+/// requisitos y contacto) están pendientes de confirmar: no se registran ni se muestran
+/// hasta que `showOpportunityDetails` se habilite.
 enum VolunteerCatalog {
+
+    /// Cambiar a `true` cuando Cáritas confirme la información de cada oportunidad.
+    static let showOpportunityDetails = false
 
     static let opportunities: [VolunteerOpportunity] = [
         VolunteerOpportunity(
-            id: "apoyo_comedor",
-            title: "Apoyo en el comedor",
-            shortDescription: "Ayuda a preparar y servir comida a las personas que asisten.",
-            systemImage: "person.2",
-            schedule: "Sábado, de 11:00 a 15:00",
-            activities: ["Preparar alimentos", "Servir la comida", "Acompañar a las personas"],
-            whoCanParticipate: "Personas mayores de 18 años con ganas de ayudar.",
-            requirements: ["Puntualidad", "Buen trato con las personas"]
+            id: "asilo",
+            title: "Asilo",
+            shortDescription: "Participa en actividades de apoyo a personas mayores.",
+            systemImage: "person.2"
         ),
         VolunteerOpportunity(
-            id: "dar_clases_apoyo",
-            title: "Dar clases de apoyo",
-            shortDescription: "Acompaña a estudiantes con sus tareas y materias escolares.",
-            systemImage: "person.2",
-            schedule: "Sábados, de 10:00 a 12:00"
+            id: "bazar",
+            title: "Bazar",
+            shortDescription: "Colabora en las actividades del bazar.",
+            systemImage: "person.2"
         ),
         VolunteerOpportunity(
-            id: "ordenar_donaciones",
-            title: "Ordenar donaciones",
-            shortDescription: "Ayuda a clasificar y acomodar ropa y productos donados.",
-            systemImage: "person.2",
-            schedule: "Miércoles, de 10:00 a 13:00"
+            id: "estancia_infantil",
+            title: "Estancia infantil",
+            shortDescription: "Participa en actividades de apoyo a niñas y niños.",
+            systemImage: "person.2"
+        ),
+        VolunteerOpportunity(
+            id: "trabajo_social",
+            title: "Trabajo social",
+            shortDescription: "Colabora con el equipo que brinda apoyo a personas y familias.",
+            systemImage: "person.2"
+        ),
+        VolunteerOpportunity(
+            id: "paquetes_alimentarios",
+            title: "Paquetes alimentarios",
+            shortDescription: "Colabora en las actividades de apoyo alimentario.",
+            systemImage: "person.2"
+        ),
+        VolunteerOpportunity(
+            id: "comedores_palafox",
+            title: "Comedores Palafox",
+            shortDescription: "Colabora en las actividades de los comedores.",
+            systemImage: "person.2"
         )
     ]
 

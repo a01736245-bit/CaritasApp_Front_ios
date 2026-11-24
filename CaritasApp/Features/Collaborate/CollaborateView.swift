@@ -4,10 +4,11 @@ import SwiftUI
 /// la sección elegida vive en `AppTabView` para conservarse al cambiar de pestaña.
 struct CollaborateView: View {
     @Binding var section: CollaborateSection
-    let onOpportunityInfo: (String) -> Void
-    let onOpportunityApply: () -> Void
     let onDonationItemTap: (String) -> Void
     let onBack: () -> Void
+
+    @Environment(\.openURL) private var openURL
+    @State private var showWhatsAppError = false
 
     /// Lee el contenido de la sección activa; al cambiar de chip se detiene la lectura.
     private var speakableText: String {
@@ -17,8 +18,9 @@ struct CollaborateView: View {
                 "Forma parte del equipo",
                 "Tu tiempo y experiencia pueden ayudar a otras personas.",
                 VolunteerCatalog.opportunities
-                    .map { "\($0.title). \($0.shortDescription)" }
-                    .joined(separator: " ")
+                    .map { "\($0.title)." }
+                    .joined(separator: " "),
+                "Consultar por WhatsApp."
             )
         case .donaciones:
             return joinSpeakable(
@@ -66,6 +68,22 @@ struct CollaborateView: View {
             }
         }
         .background(Color.cariBackground)
+        .alert("No fue posible abrir el enlace de WhatsApp en este dispositivo.", isPresented: $showWhatsAppError) {
+            Button("Aceptar", role: .cancel) {}
+        }
+    }
+
+    /// Pide al sistema abrir el chat de WhatsApp; no se envía ningún mensaje.
+    private func consultWhatsApp() {
+        guard let url = VolunteerContactConfig.whatsAppURL else {
+            showWhatsAppError = true
+            return
+        }
+        openURL(url) { accepted in
+            if !accepted {
+                showWhatsAppError = true
+            }
+        }
     }
 
     private var volunteerContent: some View {
@@ -84,18 +102,10 @@ struct CollaborateView: View {
                 ForEach(VolunteerCatalog.opportunities) { opportunity in
                     VolunteerOpportunityCard(
                         opportunity: opportunity,
-                        onViewInfo: { onOpportunityInfo(opportunity.id) },
-                        onParticipate: onOpportunityApply
+                        onConsultWhatsApp: consultWhatsApp
                     )
                 }
             }
-
-            Text("Contenido de ejemplo. Cáritas puede actualizar las oportunidades.")
-                .font(CariTypography.bodyMedium)
-                .foregroundStyle(Color.cariNavyMuted)
-                .multilineTextAlignment(.center)
-                .frame(maxWidth: .infinity)
-                .padding(.top, 16)
         }
     }
 

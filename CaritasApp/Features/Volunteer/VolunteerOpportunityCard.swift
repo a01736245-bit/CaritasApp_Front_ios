@@ -1,11 +1,14 @@
 import SwiftUI
 
-/// Tarjeta de una oportunidad en el listado, con las acciones de ver información
-/// y participar. Los dos botones comparten el ancho y su texto puede ocupar dos líneas.
+/// Tarjeta de una oportunidad en el listado: título y consulta por WhatsApp. La descripción,
+/// el lugar y el horario solo se muestran cuando `VolunteerCatalog.showOpportunityDetails` está activo.
 struct VolunteerOpportunityCard: View {
     let opportunity: VolunteerOpportunity
-    let onViewInfo: () -> Void
-    let onParticipate: () -> Void
+    let onConsultWhatsApp: () -> Void
+
+    private var showsDetails: Bool {
+        VolunteerCatalog.showOpportunityDetails
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -21,25 +24,26 @@ struct VolunteerOpportunityCard: View {
                     Text(opportunity.title)
                         .font(CariTypography.titleMedium)
                         .foregroundStyle(Color.cariNavy)
-                    Text(opportunity.shortDescription)
-                        .font(CariTypography.bodyMedium)
-                        .foregroundStyle(Color.cariNavyMuted)
+                    if showsDetails {
+                        Text(opportunity.shortDescription)
+                            .font(CariTypography.bodyMedium)
+                            .foregroundStyle(Color.cariNavyMuted)
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
 
-            if let location = opportunity.location {
-                infoLine(systemImage: "mappin", text: location)
-            }
-            if let schedule = opportunity.schedule {
-                infoLine(systemImage: "clock", text: schedule)
+            if showsDetails {
+                if let location = opportunity.location {
+                    infoLine(systemImage: "mappin", text: location)
+                }
+                if let schedule = opportunity.schedule {
+                    infoLine(systemImage: "clock", text: schedule)
+                }
             }
 
-            HStack(spacing: 12) {
-                SecondaryButton(title: "Ver información", action: onViewInfo)
-                PrimaryButton(title: "Quiero participar", action: onParticipate)
-            }
-            .padding(.top, 14)
+            PrimaryButton(title: "Consultar por WhatsApp", action: onConsultWhatsApp)
+                .padding(.top, 14)
         }
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)

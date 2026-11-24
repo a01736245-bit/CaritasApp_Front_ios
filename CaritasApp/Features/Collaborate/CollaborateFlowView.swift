@@ -12,8 +12,6 @@ struct CollaborateFlowView: View {
         NavigationStack(path: $path) {
             CollaborateView(
                 section: $section,
-                onOpportunityInfo: { path.append(.volunteerDetail(id: $0)) },
-                onOpportunityApply: { path.append(.volunteerApplication) },
                 onDonationItemTap: { path.append(.donationDetail(id: $0)) },
                 onBack: onExitToHome
             )
@@ -28,18 +26,6 @@ struct CollaborateFlowView: View {
     @ViewBuilder
     private func destination(for route: CollaborateRoute) -> some View {
         switch route {
-        case .volunteerDetail(let id):
-            if let opportunity = VolunteerCatalog.findById(id) {
-                VolunteerOpportunityDetailView(
-                    opportunity: opportunity,
-                    onParticipate: { path.append(.volunteerApplication) },
-                    onBack: goBack
-                )
-            } else {
-                PlaceholderView(title: "Oportunidad", onBack: goBack)
-            }
-        case .volunteerApplication:
-            VolunteerApplicationInfoView(onBack: goBack)
         case .donationDetail(let id):
             if let item = DonationCatalog.findById(id) {
                 DonationItemDetailView(
