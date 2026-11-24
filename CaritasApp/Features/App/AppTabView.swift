@@ -25,6 +25,8 @@ struct AppTabView: View {
     /// Pestaña y profundidad de la ruta de Servicios desde las que se abrió un recorrido
     /// (Donaciones o Ayuda). Solo existe mientras ese recorrido siga vigente.
     @State private var servicesReturn: ServicesReturn?
+    /// Identifica la sesión vigente del orientador; al cambiar, el cuestionario empieza de cero.
+    @State private var orientationSession = UUID()
 
     init() {
         #if canImport(UIKit)
@@ -61,6 +63,7 @@ struct AppTabView: View {
                 ServicesFlowView(
                     path: $servicesPath,
                     servicesReturn: $servicesReturn,
+                    orientationSession: $orientationSession,
                     onExitToHome: { selectedTab = .inicio },
                     onReturn: { selectedTab = $0 }
                 )
@@ -110,7 +113,13 @@ struct AppTabView: View {
     /// Abre una ruta de Servicios sobre la ruta actual y recuerda la pestaña de origen,
     /// para que Atrás desde esa primera pantalla regrese a ella.
     private func openServices(_ route: ServicesRoute, returningTo origin: AppTab) {
-        if servicesPath.last != route {
+        if route == .guide {
+            if let existing = servicesPath.firstIndex(of: .guide) {
+                servicesPath.removeSubrange(existing...)
+            }
+            orientationSession = UUID()
+            servicesPath.append(route)
+        } else if servicesPath.last != route {
             servicesPath.append(route)
         }
         servicesReturn = ServicesReturn(tab: origin, depth: servicesPath.count)

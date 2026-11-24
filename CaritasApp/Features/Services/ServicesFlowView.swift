@@ -13,6 +13,7 @@ struct ServicesFlowView: View {
     @Binding var path: [ServicesRoute]
     /// Es nil cuando el recorrido actual no proviene de otra pestaña.
     @Binding var servicesReturn: ServicesReturn?
+    @Binding var orientationSession: UUID
     let onExitToHome: () -> Void
     let onReturn: (AppTab) -> Void
 
@@ -22,7 +23,10 @@ struct ServicesFlowView: View {
         NavigationStack(path: $path) {
             ServicesView(
                 onCategoryTap: { path.append(.category(id: $0)) },
-                onGuideTap: { path.append(.guide) },
+                onGuideTap: {
+                    orientationSession = UUID()
+                    path.append(.guide)
+                },
                 onBack: onExitToHome
             )
             .withHiddenNavigationBar()
@@ -32,11 +36,10 @@ struct ServicesFlowView: View {
             }
         }
         .onChange(of: path.count) { _, newCount in
-            // Al salir de la primera pantalla abierta desde otra pestaña (con la flecha
-            // Atrás o con el gesto del sistema) se regresa a ella. El marcador se limpia antes.
+            // Si la ruta se reduce sin pasar por `goBack` (por ejemplo, al tocar la pestaña
+            // activa), el recorrido de origen ya no es válido y solo se descarta el marcador.
             guard let origin = servicesReturn, newCount < origin.depth else { return }
             servicesReturn = nil
-            onReturn(origin.tab)
         }
     }
 
@@ -68,6 +71,7 @@ struct ServicesFlowView: View {
                 onExit: goBack,
                 onOpenCategory: { path.append(.category(id: $0)) }
             )
+            .id(orientationSession)
         case .locationChoice(let serviceId):
             LocationChoiceView(
                 onShowAllCenters: { path.append(.centers(serviceId: serviceId, zone: nil)) },
@@ -108,8 +112,13 @@ struct ServicesFlowView: View {
     }
 
     private func goBack() {
-        if !path.isEmpty {
-            path.removeLast()
+        guard !path.isEmpty else { return }
+        // Atrás desde la primera pantalla de un recorrido abierto desde otra pestaña regresa a ella.
+        let origin = servicesReturn.flatMap { path.count == $0.depth ? $0.tab : nil }
+        path.removeLast()
+        if let origin {
+            servicesReturn = nil
+            onReturn(origin)
         }
     }
 }
