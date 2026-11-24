@@ -16,7 +16,7 @@ struct CentersView: View {
             "Elige el lugar que mejor se adapte a tu necesidad. Después, si lo deseas, puedes consultar el mapa.",
             loadFailed
                 ? "No pudimos cargar los centros. Intenta de nuevo más tarde."
-                : centersSpeakableSummary(centers)
+                : centersSpeakableSummary(centers, serviceId: highlightServiceId)
         )
     }
 

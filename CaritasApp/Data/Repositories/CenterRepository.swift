@@ -49,9 +49,21 @@ struct CenterRepository {
         centers.first { $0.id == id }
     }
 
+    /// Valor especial de zona para los centros que no tienen zona registrada.
+    static let unregisteredZone = "zona_sin_registrar"
+
     /// Zonas presentes en los centros, sin repetir y en orden alfabético.
     func zones() -> [String] {
         Array(Set(centers.compactMap(\.zone))).sorted()
+    }
+
+    /// Zonas de los centros que ofrecen el servicio (o de todos si no se indica),
+    /// sin repetir y en orden alfabético. Al final se agrega `unregisteredZone`
+    /// cuando alguno de esos centros no tiene zona.
+    func availableZones(serviceId: String? = nil) -> [String] {
+        let matching = findByFilter(serviceId: serviceId)
+        let registered = Array(Set(matching.filter { !$0.hasNoRegisteredZone }.compactMap(\.zone))).sorted()
+        return matching.contains { $0.hasNoRegisteredZone } ? registered + [Self.unregisteredZone] : registered
     }
 
     /// Centro que ofrece "Recibir ropa": su registro está en las observaciones
@@ -64,7 +76,8 @@ struct CenterRepository {
     /// - Servicio: centros con alguna clave de `ServiceExcelMapping`; si el servicio
     ///   no tiene claves confirmadas, no se devuelve ningún centro. "Recibir ropa"
     ///   se resuelve solo con el centro CP027.
-    /// - Zona: igualdad exacta; los centros sin zona quedan fuera.
+    /// - Zona: igualdad exacta; los centros sin zona quedan fuera, salvo que la zona
+    ///   sea `unregisteredZone`, que devuelve únicamente los centros sin zona.
     func findByFilter(serviceId: String? = nil, zone: String? = nil) -> [Center] {
         let serviceKeys = serviceId.map { ServiceExcelMapping.excelKeys(for: $0) } ?? []
 
@@ -80,7 +93,12 @@ struct CenterRepository {
                 matchesService = serviceKeys.contains { center.services.contains($0) }
             }
 
-            let matchesZone = zone == nil || center.zone == zone
+            let matchesZone: Bool
+            if let zone {
+                matchesZone = zone == Self.unregisteredZone ? center.hasNoRegisteredZone : center.zone == zone
+            } else {
+                matchesZone = true
+            }
             return matchesService && matchesZone
         }
     }

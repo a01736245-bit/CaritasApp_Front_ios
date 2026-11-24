@@ -4,6 +4,9 @@
     "zone": "ZONA CENTRO",
     "deanery": "Amozoc",
     "name": "Divino Salvador, Chachapa",
+    "parishPriest": "Presbítero Canonigo Jaime Hernández Amaro",
+    "coordinator": "Leticia del Carmen Cortés Mena",
+    "secretary": "Ana María Juárez Vázquez",
     "address": "Reforma sur 104 Col. Centro, Chachapa, Puebla Cp.: 72990",
     "phones": [
       "2222860667",
@@ -18,7 +21,15 @@
       "fisioterapia",
       "servicios_eucaristicos_hospitales"
     ],
-    "mapsUrl": "https://www.google.com/maps/search/parroquia+divino+salvador/@19.0474009,-98.136094,13z/data=!3m1!4b1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+    "serviceSchedules": {
+      "fisioterapia": "",
+      "apoyo_psicologico": "",
+      "aparatos_ortopedicos": "",
+      "cursos_talleres_seminarios": "",
+      "despensas_banco_alimentos" : "",
+      "servicios_eucaristicos_hospitales": ""
+    },
+    "mapsUrl": "https://maps.app.goo.gl/xpAnogJoTxM5gigJ8"
   },
   {
     "id": "CP002",
@@ -43,13 +54,35 @@
       "otros_beneficios",
       "servicios_eucaristicos_hospitales"
     ],
-    "mapsUrl": "https://www.google.com/maps/search/jES%C3%9AS+bUEN+pASTOR+amalucan/@19.0581695,-98.1593095,15z?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+    "serviceSchedules": {
+      "bazar": "",
+      "dispensario": "",
+      "banco_de_medicamentos": "",
+      "comidas_calientes" : "",
+      "consultas_odontologicas": "",
+      "cuidado_integral_de_la_creacion" : "",
+      "despensas_banco_alimentos" : "",
+      "fisioterapia" : "",
+      "otros_beneficios": "",
+      "servicios_eucaristicos_hospitales" : ""
+
+
+
+
+    },
+    "mapsUrl": "https://maps.app.goo.gl/4xh8pEn5cTJ1spni8"
   },
   {
     "id": "CP003",
     "zone": "ZONA URBANA",
     "deanery": "Mayorazgo",
     "name": "La Divina Providencia, Castillotla",
+    "parishPriest": "Presbítero Arcadio Flores Tlalalpa",
+    "coordinator": "Reina González Aguilar",
+    "secretary": "María Elena Ciaca",
+    "treasurer": "Yolanda Juárez Echavarría",
+    "vocal1": "María Elena Ciaca",
+    "vocal2": "Nicolasa Delgado Rosas",
     "address": "Antiguo Camino Real a Castillotla, Lomas de Castillotla, 72490, Puebla, Pue.",
     "phones": [
       "2222414357"
@@ -62,6 +95,15 @@
       "otros_beneficios",
       "servicios_eucaristicos_hospitales"
     ],
+    "serviceSchedules": {
+      "bazar": "Jueves",
+      "consultas_medicas": "Cualquier día de la semana",
+      "banco_de_medicamentos" : "Miercoles",
+      "despensas_parroquia" : "Viernes",
+      "otros_beneficios" : "",
+      "servicios_eucaristicos_hospitales" : "Sin días ni horarios definidos"
+
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+la+Divina+Providencia/@18.9846242,-98.2577171,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfb88debf81953:0xee522b8d9e060abf!8m2!3d18.9846191!4d-98.2551422!16s%2Fg%2F1tfrxtyq?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
@@ -69,6 +111,7 @@
     "zone": "ZONA URBANA",
     "deanery": "María Reina",
     "name": "María Reina",
+
     "address": "Río Bravo # 5730 Col. Jardines de San Manuel, Puebla. Pue. CP.: 72570",
     "phones": [
       "2222453875"
@@ -80,6 +123,14 @@
       "despensas_parroquia",
       "otros_beneficios"
     ],
+    "serviceSchedules": {
+      "bazar": "",
+      "despensas_parroquia" : "",
+      "aparatos_ortopedicos" : "",
+      "despensas_banco_alimentos" : "",
+      "otros_beneficios" : ""
+
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Mar%C3%ADa+Reina+San+Manuel/@19.0088037,-98.2022209,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfc0a1d4e22f0d:0x4355195aea60eccc!8m2!3d19.0087986!4d-98.199646!16s%2Fg%2F1tdcb46b?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
@@ -87,6 +138,13 @@
     "zone": "ZONA SUR",
     "deanery": "Atlixco",
     "name": "Nuestra Señora de Guadalupe",
+    "parishPriest": "Pablo Rosas Cortés",
+    "coordinator": "Tomasa Canela",
+    "secretary": "Joaquín Briones Parra",
+    "treasurer": "Asunción Valencia Vázquez",
+    "vocal1": "Ofelia Pérez Flores",
+    "vocal2": "Tania Estefanía Romero Pérez",
+    "vocal3": "Francisca Rojas",
     "address": "21 poniente esquina Zaragoza Col. Guadalupe Victoria, Atlixco Cp. 74280",
     "phones": [
       "2444456199"
@@ -103,13 +161,34 @@
       "otros_beneficios",
       "servicios_eucaristicos_hospitales"
     ],
+    "serviceSchedules": {
+
+      "auxilio_migrantes_y_peregrinos" : "",
+      "banco_de_medicamentos": "",
+      "comidas_calientes": "",
+      "bazar": "",
+      "despensas_parroquia" : "",
+      "aparatos_ortopedicos" : "",
+      "despensas_banco_alimentos" : "",
+      "dispensario": "",
+      "servicios_eucaristicos_hospitales": "",
+      "otros_beneficios" : ""
+
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Nuestra+Se%C3%B1ora+de+Guadalupe/@18.8991029,-98.4440802,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfb37f94423959:0xb897eb16b661b6e9!8m2!3d18.8990978!4d-98.4415053!16s%2Fg%2F11cnwf0gqs?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
+
   {
     "id": "CP006",
     "zone": "ZONA URBANA",
     "deanery": "Santa Teresita",
     "name": "Nuestra Señora de la Anunciación",
+    "parishPriest": "Padre Dante Pimentel",
+    "coordinator": "Angélica Centeno",
+    "treasurer": "Celia Melgarejo",
+    "otherBenefitsDetails": "Acopio de leche.",
     "address": "Estrella del Sur 5115, 72190 Puebla, Pue. (Dentro del fraccionamiento Estrella del Sur)",
     "phones": [
       "2222302283"
@@ -117,13 +196,21 @@
     "services": [
       "otros_beneficios"
     ],
+    "serviceSchedules": {
+      "otros_beneficios" : ""
+
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+Nuestra+Se%C3%B1ora+de+la+Anunciaci%C3%B3n/@19.0388163,-98.2825241,14z/data=!4m10!1m2!2m1!1sEstrella+del+Sur+5115,+72190+Puebla,+Pue.!3m6!1s0x85cfc717ee05558d:0xde483926c9278110!8m2!3d19.0388163!4d-98.2444153!15sCilFc3RyZWxsYSBkZWwgU3VyIDUxMTUsIDcyMTkwIFB1ZWJsYSwgUHVlLlooIiZlc3RyZWxsYSBkZWwgc3VyIDUxMTUgNzIxOTAgcHVlYmxhIHB1ZZIBBnBhcmlzaJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuVFVSQmQyWlVSRlJuRUFF4AEA-gEECHwQOA!16s%2Fg%2F1tgnmdsg?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
+
   {
     "id": "CP007",
     "zone": "ZONA SUR",
     "deanery": "Atlixco",
     "name": "Nuestra Señora de la Asunción, Acapetlahuacan",
+    "otherBenefitsDetails": "Ultrasonidos.",
     "address": "Ex Convento de San Francisco, Circunvalación Tlaloc # 4 Col. Ricardo Treviño, Acapetlahuacán, Atlixco Cp.: 74200",
     "phones": [
       "2444451969",
@@ -136,8 +223,20 @@
       "otros_beneficios",
       "servicios_eucaristicos_hospitales"
     ],
+    "serviceSchedules": {
+
+      "despensas_parroquia" : "",
+      "despensas_banco_alimentos" : "",
+      "fisioterapia": "",
+      "servicios_eucaristicos_hospitales": "",
+      "otros_beneficios" : ""
+
+    },
     "mapsUrl": "https://www.google.com/maps/search/Nuestra+se%C3%B1ora+de+la+asunci%C3%B3n/@18.9050096,-98.4507132,15z/data=!3m1!4b1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
+
   {
     "id": "CP008",
     "zone": "ZONA URBANA",
@@ -148,8 +247,11 @@
       "2222243961"
     ],
     "services": [],
-    "mapsUrl": "https://www.google.com/maps/place/Guadalajara+73,+San+Rafael+Poniente,+72029+Heroica+Puebla+de+Zaragoza,+Pue./@19.0841423,-98.2325381,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfc6b0f8ef90b1:0x8a0e7606175bd094!8m2!3d19.0841372!4d-98.2299632!16s%2Fg%2F11kqd9_88p?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+    "mapsUrl": "https://maps.app.goo.gl/iD1Z9Rdd5QtfxtXz6"
   },
+
+
+
   {
     "id": "CP009",
     "zone": "ZONA CENTRO",
@@ -163,6 +265,7 @@
     "services": [],
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Nuestra+Se%C3%B1ora+del+Destierro/@19.1019495,-98.1630956,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfc18a065a5755:0xc646e3e5852ff09c!8m2!3d19.1019444!4d-98.1605207!16s%2Fg%2F11c6cq1fy1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
   {
     "id": "CP010",
     "zone": "ZONA URBANA",
@@ -179,13 +282,28 @@
       "despensas_parroquia",
       "servicios_eucaristicos_hospitales"
     ],
+    "serviceSchedules": {
+
+      "despensas_parroquia" : "",
+      "despensas_banco_alimentos" : "",
+      "comidas_calientes": "",
+      "servicios_eucaristicos_hospitales": "",
+      "banco_de_medicamentos" : ""
+
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Nuestra+Se%C3%B1ora+del+Refugio/@18.9953531,-98.2405281,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfb8a47feb678b:0x7990c357847ca135!8m2!3d18.995348!4d-98.2379532!16s%2Fg%2F1tjrq9lk?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
+
   {
     "id": "CP011",
     "zone": "ZONA URBANA",
     "deanery": "María Reina",
     "name": "Nuestra Señora del Rosario",
+    "parishPriest": "Padre Jorge López Arciga",
+    "coordinator": "Elia Silvia Vargas",
+    "secretary": "Efraín Serna Meléndez",
     "address": "Blvd. 42 sur # 671 U. H. Infonavit la Margarita, Puebla, Pue. CP. 72450",
     "phones": [
       "2224265978",
@@ -199,13 +317,30 @@
       "despensas_parroquia",
       "servicios_eucaristicos_hospitales"
     ],
-    "mapsUrl": "https://www.google.com/maps/search/Blvd.+42+sur+%23+671+U.+H.+Infonavit+la+Margarita,+Puebla,+Pue.+CP.+72450/@19.0032209,-98.2013594,14.75z?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+    "serviceSchedules": {
+
+      "despensas_parroquia" : "De Lunes a Domingo",
+      "aparatos_ortopedicos" : "De Lunes a Domingo",
+      "banco_de_medicamentos": "De Lunes a Domingo",
+      "servicios_eucaristicos_hospitales": "De Lunes a Domingo",
+      "bazar" : "Sábado a Domingo : 09:00 - 13:00",
+      "comedores_palafox" : "De Lunes a Sábado"
+    },
+    "mapsUrl": "https://maps.app.goo.gl/xU1gh4shJZr6tV8K9"
   },
+
+
   {
     "id": "CP012",
     "zone": "ZONA URBANA",
     "deanery": "Mayorazgo",
     "name": "Sagrado Corazón de Jesús y San Cayetano",
+    "parishPriest": "Franco Isidro Placencia Gómez",
+    "coordinator": "María Alberta Sonia Lira Sánchez",
+    "secretary": "Gabriela Martínez García",
+    "treasurer": "Genoveva Cruz Guzmán",
+    "vocal1": "Natividad Agatón Gutiérrez",
+    "vocal2": "Serafín Contreras Bahena",
     "address": "Calle Iris número 14913, Tercera Sección de San Ramón (con entrada principal por la zona de Gardenias), C.P. 72490, Puebla, Puebla.",
     "phones": [
       "2223878641"
@@ -216,6 +351,13 @@
       "despensas_banco_alimentos",
       "despensas_parroquia"
     ],
+    "serviceSchedules": {
+
+      "despensas_parroquia" : "Sábados y Domingos, sin horario específico",
+      "banco_de_medicamentos": "Sábados, sin horario específico",
+      "bazar" : "Domingos, sin horario específico ",
+      "despensas_banco_alimentos" : "Sábados, sin horario específico"
+    },
     "mapsUrl": "https://www.google.com/maps/place/Sagrado+Coraz%C3%B3n+de+Jesus+Y+San+Cayetano/@18.9644798,-98.2633397,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfb8f976150c6f:0x1392f6a66404ef07!8m2!3d18.9644747!4d-98.2607648!16s%2Fg%2F1hm5_cfc8?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
@@ -235,6 +377,7 @@
     "zone": "ZONA NORTE",
     "deanery": "Tlatlauquitepec",
     "name": "San Andrés Apóstol, Hueyapan",
+    "otherBenefitsDetails": "Acopio de leche y apoyo con ataúdes.",
     "address": "Calle Ocampo No. 1 Col. Centro Hueyapan, Pue. Cp.: 73920",
     "phones": [
       "2313110453"
@@ -255,6 +398,23 @@
       "servicios_eucaristicos_hospitales",
       "visitas_personas_privadas_libertad"
     ],
+    "serviceSchedules": {
+
+      "auxilio_migrantes_y_peregrinos" : "",
+      "banco_de_medicamentos": "",
+      "comidas_calientes": "",
+      "bazar": "",
+      "despensas_parroquia" : "",
+      "aparatos_ortopedicos" : "",
+      "despensas_banco_alimentos" : "",
+      "dispensario": "",
+      "servicios_eucaristicos_hospitales": "",
+      "otros_beneficios" : "",
+      "consultas_odontologicas" : "",
+      "cursos_talleres_seminarios" : "",
+      "fisioterapia": "",
+      "visitas_personas_privadas_libertad" : ""
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Andres+Apostol+Hueyapan/@19.8822724,-97.4477142,17z/data=!3m1!4b1!4m6!3m5!1s0x85da94aec6593773:0xad9b65c4e25aedf5!8m2!3d19.8822674!4d-97.4451393!16s%2Fg%2F11cmdhs975?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
@@ -298,6 +458,13 @@
     "zone": "ZONA URBANA",
     "deanery": "María Reina",
     "name": "San Baltazar, Campeche",
+    "parishPriest": "Luis Ignacio Brito Miranda",
+    "coordinator": "Candelario Soriana Cortés",
+    "secretary": "Georgina Cruz Gómez",
+    "treasurer": "Rosa María De la Fuente Ch.",
+    "vocal1": "Socorro Analco Mendoza",
+    "vocal2": "Adriana Cervantes Lima",
+    "vocal3": "Alma Delia Rocha",
     "address": "Calle Cué Merlo # 204 Col. San Baltazar Campeche, Puebla, Pue., Cp. 72550",
     "phones": [
       "2221279472",
@@ -309,13 +476,28 @@
       "bazar",
       "despensas_parroquia"
     ],
+    "serviceSchedules": {
+
+      "aparatos_ortopedicos" : "De Jueves a Domingo: 10:30 - 13:30 horas",
+      "banco_de_medicamentos": "De Jueves a Domingo",
+      "bazar" : "De Jueves a Domingo ",
+      "despensas_parroquia" : "Domingos"
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Baltazar+Campeche/@19.0242465,-98.2119106,17z/data=!4m10!1m2!2m1!1sCalle+Cu%C3%A9+Merlo+%23+204+Col.+San+Baltazar+Campeche,+Puebla,+Pue.,++Cp.+72550!3m6!1s0x85cfc0b9702bc44d:0x5b7f6c286e093d5d!8m2!3d19.0242465!4d-98.207147!15sCktDYWxsZSBDdcOpIE1lcmxvICMgMjA0IENvbC4gU2FuIEJhbHRhemFyIENhbXBlY2hlLCBQdWVibGEsIFB1ZS4sICBDcC4gNzI1NTCSAQ9jYXRob2xpY19jaHVyY2jgAQA!16s%2Fg%2F1whdjprp?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
   },
+
   {
     "id": "CP019",
     "zone": "ZONA URBANA",
     "deanery": "María Reina",
     "name": "San Buenaventura, Nealtican",
+    "parishPriest": "Jesús Vázquez Arana",
+    "coordinator": "Dulce María Tobón Tepoz",
+    "secretary": "Raúl Luna Popoca",
+    "treasurer": "Miguel Xaltepec Castillo",
+    "vocal1": "Genoveva Castillo Santamaría",
+    "vocal2": "Gregorio Castro Meza",
+    "vocal3": "Pedro Torres Ramíres",
     "address": "Calle Zaragoza # 1 Col. Centro, San Buenaventura Nealtican, Cp. 74300",
     "phones": [],
     "services": [
@@ -323,13 +505,27 @@
       "comidas_calientes",
       "despensas_banco_alimentos"
     ],
-    "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Buenaventura/@19.0509062,-98.4313524,17z/data=!4m10!1m2!2m1!1sparroquia+San+Buenaventura+Nealtican!3m6!1s0x85cfcbb10830e03b:0x49dc6c79d2e707d8!8m2!3d19.0509062!4d-98.4265888!15sCiRwYXJyb3F1aWEgU2FuIEJ1ZW5hdmVudHVyYSBOZWFsdGljYW5aJiIkcGFycm9xdWlhIHNhbiBidWVuYXZlbnR1cmEgbmVhbHRpY2FukgEGY2h1cmNomgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJwc1RWcEhVazVOYlVZMFpGUktiRm94U21aWldGSjZWRlJXYUZSdVl4QULgAQD6AQQIABA-!16s%2Fg%2F11c0wf53pl?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+    "serviceSchedules": {
+
+      "aparatos_ortopedicos" : "De Lunes a Sábado",
+      "comidas_calientes": "De Lunes as Sábado",
+      "despensas_banco_alimentos" : "Sábados"
+    },
+    "mapsUrl": "https://maps.app.goo.gl/bxREASDQvtK4Z9XD9"
   },
+
   {
     "id": "CP020",
     "zone": "ZONA SUR",
     "deanery": "Izúcar de Matamoros",
     "name": "San Francisco de Asís, Chietla",
+    "parishPriest": "Mucio Cruz Maldonado",
+    "coordinator": "Florencoa Toxquez Rodríguez",
+    "secretary": "Verónica Vera Paredes",
+    "treasurer": "Reina Lucero Guizarnotegui",
+    "vocal1": "Juana Lucero Cazarez",
+    "vocal2": "Benita Lucero Guizarnotegui",
+    "vocal3": "Natividad Ponce de León",
     "address": "Jiménez 7 Centro, 74580, Chietla, Pue.",
     "phones": [
       "2434310121",
@@ -342,13 +538,27 @@
       "comidas_calientes",
       "despensas_banco_alimentos"
     ],
+    "serviceSchedules": {
+
+      "aparatos_ortopedicos" : "Lunes, Martes, Jueves y Viernes : 9:00 - 14:00 ",
+      "comidas_calientes": "Lunes, Martes, Jueves y Viernes : 9:00 - 14:00",
+      "despensas_banco_alimentos" : "Los Viernes, sin horario establecido",
+      "bazar" : "Lunes, Martes, Jueves y Viernes : 9:00 - 14:00",
+      "comedores_palafox": "Lunes, Martes, Jueves y Viernes. Sin horario definido"
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+San+Francisco+de+As%C3%ADs,+Chietla,+Puebla/@18.5194859,-98.5801992,17z/data=!3m1!4b1!4m6!3m5!1s0x85cef955deb01ea9:0x98afbc65ee8b7821!8m2!3d18.5194808!4d-98.5776243!16s%2Fg%2F1tdh8sml?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
   {
     "id": "CP021",
     "zone": "ZONA ORIENTE",
     "deanery": null,
     "name": "San Jerónimo, Aljojuca",
+    "parishPriest": "Ricardo Escobedo García",
+    "coordinator": "Gloria Estévez Maximiliano",
+    "secretary": "Jorge Hernández Ruiz",
+    "treasurer": "María Eugenia Bautista Crtisanto",
+    "vocal1": "María Fernanda Hernández Mauricio",
     "address": "Av. Independencia No. 4, Tercera Sección, 75180, Aliojuca, Pue.",
     "phones": [
       "2491863986",
@@ -361,6 +571,14 @@
       "dispensario",
       "estancia_infantil"
     ],
+    "serviceSchedules": {
+
+      "apoyo_psicologico" : "Sábados : 13:00 - 15:00 ",
+      "consultas_medicas": "Jueves : 13:00 - 15:00",
+      "cursos_talleres_seminarios" : "Sábados : 10:00 - 13:00",
+      "dispensario" : "Jueves : 13:00 - 15:00",
+      "estancia_infantil": "De Martes a Jueves : 10:00 - 13:00"
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Jer%C3%B3nimo/@19.0999464,-97.5340434,17z/data=!3m1!4b1!4m6!3m5!1s0x85c543dc0cfd2a8b:0x64b26013f02481a2!8m2!3d19.0999413!4d-97.5314685!16s%2Fg%2F11c329sb2g?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D"
   },
   {
@@ -393,6 +611,13 @@
     "zone": "ZONA ORIENTE",
     "deanery": "Libres",
     "name": "San Juan Bautista, Libres",
+    "parishPriest": "Alejandro Vázquez Espinosa",
+    "coordinator": "Leonila Ortega Díaz",
+    "secretary": "Minerva Javier",
+    "treasurer": "Mónica Yáñez Ortega",
+    "vocal1": "Carmen Vázquez",
+    "vocal2": "Catalina Diego",
+    "vocal3": "Teresa Yáñez",
     "address": "Constitución No. 3, Centro, 73780, Libres, Pue.",
     "phones": [
       "2764730124"
@@ -408,13 +633,32 @@
       "fisioterapia",
       "visitas_personas_privadas_libertad"
     ],
+    "serviceSchedules": {
+      "despensas_parroquia" : "Primer Domingo del mes",
+      "aparatos_ortopedicos" : "",
+      "dispensario": "Miércoles : 10:00 - 12:00",
+      "banco_de_medicamentos": " Miércoles : 10:00 - 12:00",
+      "bazar": "De Lunes a Sábado: 11:00 - 14:00",
+      "consultas_odontologicas" : "Domingos : 08:00 - 14:00",
+      "fisioterapia": "Domingos : 08:00 - 14:00",
+      "visitas_personas_privadas_libertad" : "La visita al CERESO es cada año en Cuaresma",
+      "apoyo_psicologico" : "Domingos : 08:00 - 14:00"
+
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Juan+Bautista/@19.4641156,-97.689359,17z/data=!3m1!4b1!4m6!3m5!1s0x85daac654c2e07ef:0xbd263175934435d6!8m2!3d19.4641106!4d-97.6867841!16s%2Fg%2F11c0q_5ftg?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
   {
     "id": "CP025",
     "zone": "ZONA CENTRO",
     "deanery": "Tecamachalco",
     "name": "San Juan Evangelista, Acatzingo",
+    "parishPriest": "Bonfilio Raúl Reyes Juárez",
+    "coordinator": "Ana Cristina Campa",
+    "secretary": "María Concepción Victoria Sandoval",
+    "treasurer": "Rfugio Victoria Sandoval",
+    "vocal1": "Juana Arenas de Félix",
+    "vocal2": "Martha Bautista Jiménez",
     "address": "16 de Septiembre 205, Col. Centro, Acatzingo, Puebla, 75150",
     "phones": [
       "2491190067",
@@ -432,13 +676,32 @@
       "fisioterapia",
       "otros_beneficios"
     ],
+    "serviceSchedules": {
+      "despensas_parroquia" : "",
+      "aparatos_ortopedicos" : "",
+      "dispensario": "",
+      "banco_de_medicamentos": "",
+      "bazar": "Los 7 días de la semana, sin horario específico",
+      "consultas_odontologicas" : "Lunes, Miércoles, Jueves y Viernes : 10:30 - 14:00 ",
+      "fisioterapia": "De Lunes a Jueves : 10:30 - 18:00",
+      "apoyo_psicologico" : "De Lunes a Viernes : 10:30 - 21:00 horas y Sábados : 09:00 - 19:00",
+      "otros_beneficios": "Optometría : Martes y Viernes de 10:30 - 17:00 y retiro de verrugas : Sábados de 10:00 - 14:00",
+      "consultas_medicas": "De Lunes a Martes : 10:30 - 14:00"
+
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Juan+Evangelista/@18.9817278,-97.7866308,17z/data=!3m1!4b1!4m6!3m5!1s0x85c5602a10e4e711:0xacccbec3b0662054!8m2!3d18.9817227!4d-97.7840559!16s%2Fg%2F12cp3pb2_?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
   {
     "id": "CP026",
     "zone": "ZONA CENTRO",
     "deanery": "Amozoc",
     "name": "San Luís Guanella",
+    "parishPriest": "Luis Álvaro Barrios Ramos",
+    "coordinator": "Isabel Báez Torres",
+    "secretary": "Soledad González Calixto",
+    "treasurer": "María Elena González Sánchez",
+    "vocal1": "María Estela González Sánchez",
     "address": "Religiosos Padres Guanelianos, Calle Maximino Ávila Camacho No. 76, Col. La Preciosa Sangre, Capulac, Amozoc, Cp.: 72920",
     "phones": [
       "2222710914",
@@ -458,13 +721,35 @@
       "otros_beneficios",
       "visitas_personas_privadas_libertad"
     ],
+    "serviceSchedules": {
+      "despensas_parroquia" : "",
+      "aparatos_ortopedicos" : "",
+      "dispensario": "",
+      "banco_de_medicamentos": "",
+      "bazar": "",
+      "fisioterapia": "",
+      "otros_beneficios": "",
+      "asistencia_en_desastres" :  "",
+      "auxilio_migrantes_y_peregrinos": "",
+      "despensas_banco_alimentos" : "",
+      "envio_pacientes_clinica_fundacion" : "",
+      "visitas_personas_privadas_libertad" : ""
+
+    },
     "mapsUrl": "https://www.google.com/maps/place/Domo+San+Luis+Guanela/@19.0607299,-98.0487373,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfec7ff0b2726f:0xd0c59b163cbe00ae!8m2!3d19.0607248!4d-98.0461624!16s%2Fg%2F11c2nhtx9c?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
   {
     "id": "CP027",
     "zone": "ZONA CENTRO",
     "deanery": "Acajete",
     "name": "San Marcos Evangelista, Grajales",
+    "parishPriest": "Antonio Sacaula Ramos",
+    "coordinator": "Lizbeth Parra Ratia",
+    "secretary": "María de la Paz García",
+    "treasurer": "Silvia Arenas Castilla",
+    "vocal1": "Rufina Huerta Martínez",
+    "otherBenefitsDetails": "Entrega de ropa cada dos meses en la Junta Auxiliar. Aproximadamente de 200 a 300 prendas por entrega.",
     "address": "Emilio Carranza # 6 (Casa Parroquial 3 sur # 6) Col. Centro, Rafael Lara Grajales Cp.: 75000",
     "phones": [
       "2764740065"
@@ -477,13 +762,32 @@
       "dispensario",
       "otros_beneficios"
     ],
+    "serviceSchedules": {
+      "aparatos_ortopedicos" : "Miércoles y Viernes : 10:00 -14:00",
+      "dispensario": "Miércoles y Viernes : 10:00 - 14:00",
+      "banco_de_medicamentos": "Miércoles y Viernes : 10:00 - 15:00",
+      "bazar": "Miércoles y Viernes : 10:00 - 14:00",
+      "otros_beneficios": "",
+      "consultas_medicas" :"Viernes : 10:00 - 15:00"
+
+
+    },
     "mapsUrl": "https://www.google.com/maps/search/parroquia+San+Marcos+Evangelista,+Grajales/@19.1361702,-98.1694756,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
+
   {
     "id": "CP028",
     "zone": "ZONA PONIENTE",
     "deanery": "Tlalancaleca",
     "name": "San Matías Apóstol",
+    "parishPriest": "Pbro. José Huerta Espinoza",
+    "coordinator": "Gabriela Saavedra Lozano",
+    "secretary": "María Isabel Macías",
+    "treasurer": "Julia Verónica Aguilar Rocha",
+    "vocal1": "Claudia",
+    "vocal2": "Fidel",
     "address": "Pt. Hidalgo 10 Centro, 74110, San Matías Tlalancaleca, Pue.",
     "phones": [
       "2482280961"
@@ -494,13 +798,27 @@
       "consultas_medicas",
       "despensas_parroquia"
     ],
-    "mapsUrl": "https://www.google.com/maps/search/San+Mat%C3%ADas+Ap%C3%B3stol,+tlalancaleca+puebla/@19.3238198,-98.4996927,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+    "serviceSchedules": {
+      "aparatos_ortopedicos" : "Sábados, sin horario específico",
+      "bazar": "De Lunes a Domingo, sin horario específico",
+      "despensas_parroquia": "Lunes y Domingos, sin horario específico",
+      "consultas_medicas" :"Las consultas se dan los días que se requieran"
+    },
+    "mapsUrl": "https://maps.app.goo.gl/kdZQTMZ4qb8vT8dv8"
   },
+
+
+
   {
     "id": "CP029",
     "zone": "ZONA PONIENTE",
     "deanery": "Xoxtla",
     "name": "San Miguel Arcángel",
+    "parishPriest": "Pbro. Marco Antonio García Ángeles",
+    "coordinator": "Rosenda Nora Juárez",
+    "secretary": "José Ángel Mexicano Beltrán",
+    "treasurer": "Claudia Ramos Ramos",
+    "vocal1": "Reyna Flores Pérez",
     "address": "Plazuela Benito Juárez #19, San Miguel Xoxtla, Puebla, 72620",
     "phones": [
       "2222815608"
@@ -513,8 +831,18 @@
       "despensas_banco_alimentos",
       "despensas_parroquia"
     ],
+    "serviceSchedules": {
+      "aparatos_ortopedicos" : "Lunes y Sábados",
+      "despensas_parroquia": "Temporal",
+      "apoyo_psicologico":  "Sábados",
+      "auxilio_migrantes_y_peregrinos":  "Temporal",
+      "banco_de_medicamentos":  "Lunes y Sábados : 10:00 - 14:00",
+      "despensas_banco_alimentos": "Martes : 12:00 - 16:00"
+    },
+
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Miguel+Arcangel+Xoxtla/@19.168072,-98.311577,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfcff566d377fd:0xcb536223d7da7cb8!8m2!3d19.168067!4d-98.3090021!16s%2Fg%2F11cnwdy24f?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
   {
     "id": "CP030",
     "zone": "ZONA PONIENTE",
@@ -533,6 +861,14 @@
       "otros_beneficios",
       "servicios_eucaristicos_hospitales"
     ],
+    "serviceSchedules": {
+      "aparatos_ortopedicos" : "",
+      "despensas_parroquia": "",
+      "banco_de_medicamentos":  "",
+      "bazar": "",
+      "otros_beneficios": "",
+      "servicios_eucaristicos_hospitales": ""
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Pedro+Cholula/@19.0635436,-98.3088079,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfc627026bfc07:0x87777ee213fbe503!8m2!3d19.0635385!4d-98.306233!16s%2Fg%2F11cnwf0gr8?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
@@ -560,11 +896,13 @@
     "services": [],
     "mapsUrl": "https://www.google.com/maps/place/Templo+Parroquial+Santa+Mar%C3%ADa+De+La+Asunci%C3%B3n/@19.0449304,-98.0472677,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfec9da6cec3f5:0x9a9168fde03c9c08!8m2!3d19.0449253!4d-98.0446928!16s%2Fg%2F11clh2ffbj?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
   {
     "id": "CP033",
     "zone": "ZONA NORTE",
     "deanery": "Tlatlauquitepec",
     "name": "Santa María de la Asunción, Tlatlauquitepec",
+    "otherBenefitsDetails": "Corte de cabello y acupuntura.",
     "address": "Av. Reforma 80, Centro, 73900 Tlatlauquitepec, Pue.",
     "phones": [
       "2333180500"
@@ -577,8 +915,19 @@
       "otros_beneficios",
       "servicios_eucaristicos_hospitales"
     ],
+    "serviceSchedules": {
+      "aparatos_ortopedicos" : "",
+      "despensas_parroquia": "",
+      "despensas_banco_alimentos": "",
+      "bazar": "",
+      "otros_beneficios": "",
+      "servicios_eucaristicos_hospitales": ""
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroqu%C3%ADa+de+Santa+Mar%C3%ADa+de+la+Asunci%C3%B3n/@19.8500978,-97.499899,17z/data=!3m1!4b1!4m6!3m5!1s0x85cf001392db96eb:0x54cea84ffda841fd!8m2!3d19.8500928!4d-97.4973241!16s%2Fg%2F1tdh464f?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
+
   {
     "id": "CP034",
     "zone": "ZONA NORTE",
@@ -589,13 +938,15 @@
       "7975961219"
     ],
     "services": [],
-    "mapsUrl": "https://www.google.com/maps/search/parroquia+Santa+Mar%C3%ADa+de+la+Asunci%C3%B3n,+Tepetzintla/@19.9089632,-97.8339531,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+    "mapsUrl": "https://maps.app.goo.gl/gD6P6nDXGv58SYae9"
   },
+
   {
     "id": "CP035",
     "zone": "ZONA SUR",
     "deanery": "Chiautla de Tapia",
     "name": "Santa María de la Asunción, Tlancualpican",
+    "otherBenefitsDetails": "Donación de ataúdes.",
     "address": "Leona Vicario # 1 Col. Centro, Tlancualpicán Cp.: 74735",
     "phones": [
       "2754314492"
@@ -609,8 +960,20 @@
       "otros_beneficios",
       "servicios_eucaristicos_hospitales"
     ],
+    "serviceSchedules": {
+      "aparatos_ortopedicos" : "",
+      "despensas_parroquia": "",
+      "comidas_calientes": "",
+      "cursos_talleres_seminarios": "",
+      "fisioterapia": "",
+      "otros_beneficios": "",
+      "servicios_eucaristicos_hospitales": ""
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+Santa+Maria+de+la+Asunci%C3%B3n/@18.4298674,-98.7027516,17z/data=!3m1!4b1!4m6!3m5!1s0x85cef100381ef065:0xefc17eaa0fe6c2ae!8m2!3d18.4298623!4d-98.7001767!16s%2Fg%2F11l_9bww4g?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
+
   {
     "id": "CP036",
     "zone": "ZONA CENTRO",
@@ -640,13 +1003,29 @@
       "dispensario",
       "servicios_eucaristicos_hospitales"
     ],
+    "serviceSchedules": {
+
+      "despensas_parroquia": "",
+      "banco_de_medicamentos": "",
+      "despensas_banco_alimentos": "",
+      "dispensario": "",
+      "servicios_eucaristicos_hospitales": ""
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Santa+Mar%C3%ADa+de+la+Natividad+Cuyoaco/@19.6054953,-97.6233724,17z/data=!3m1!4b1!4m6!3m5!1s0x85daa5420da1a675:0x72fa5d36c2820bbc!8m2!3d19.6054903!4d-97.6207975!16s%2Fg%2F11jt8kyg1r?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
   {
     "id": "CP038",
     "zone": "ZONA NORTE",
     "deanery": "Zacapoaxtla",
     "name": "Santa María de la Natividad, Nauzontla",
+    "parishPriest": "Santiago Jaramillo Tlapaya",
+    "coordinator": "Marco Olvera González",
+    "secretary": "Flora de Jesús Huizil",
+    "treasurer": "Ana Sierra",
+    "vocal1": "Erika Zamora de Jesús",
+    "otherBenefitsDetails": "Repartición de leche en polvo.",
     "address": "Calle Francisco I Madero No. 39, Col. Centro, Nauzontla   Cp.: 73550",
     "phones": [
       "2223107304"
@@ -657,13 +1036,23 @@
       "envio_pacientes_clinica_fundacion",
       "otros_beneficios"
     ],
+    "serviceSchedules": {
+      "aparatos_ortopedicos": "Viernes,  sin horario específico",
+      "cuidado_integral_de_la_creacion": "Sábados, sin horario específico",
+      "envio_pacientes_clinica_fundacion": "",
+      "otros_beneficios": ""
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+Santa+Mar%C3%ADa+de+la+Natividad/@19.9606179,-97.6049962,17z/data=!3m1!4b1!4m6!3m5!1s0x85da900e784157f5:0xd08671386d9d378e!8m2!3d19.9606129!4d-97.6024213!16s%2Fg%2F11g6px61cj?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
   {
     "id": "CP039",
     "zone": "ZONA NORTE",
     "deanery": "Zapotitlán",
     "name": "Santiago Apóstol, Huitzilan de Serdán",
+    "parishPriest": "(SIN PÁRROCO)",
+    "coordinator": "Leandro González Bonilla",
+    "otherBenefitsDetails": "Entrega de leche.",
     "address": "Refugio S. Carmona 447, Cuarta Sección, 73450 Huitzilan, Pue.",
     "phones": [
       "2761034582",
@@ -673,13 +1062,20 @@
       "banco_de_medicamentos",
       "otros_beneficios"
     ],
+    "serviceSchedules": {
+      "banco_de_medicamentos": "",
+      "otros_beneficios": ""
+    },
     "mapsUrl": "https://www.google.com/maps/place/PARROQUIA+DE+SANTIAGO+APOSTOL/@19.9669306,-97.6960837,17z/data=!3m1!4b1!4m6!3m5!1s0x85da9b56a585a0bd:0x87b59e32a3fdcb1e!8m2!3d19.9669256!4d-97.6935088!16s%2Fg%2F11c5zs60k5?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
   {
     "id": "CP040",
     "zone": "ZONA CENTRO",
     "deanery": null,
     "name": "Santo Tomás de Aquino, Tlapanalá",
+    "otherBenefitsDetails": "Entrega de leche.",
     "address": "Calle Mercaderes # 8, Centro., Tlapanalá 74540",
     "phones": [
       "2444414413"
@@ -689,13 +1085,24 @@
       "dispensario",
       "otros_beneficios"
     ],
+    "serviceSchedules": {
+      "banco_de_medicamentos": "",
+      "dispensario": "",
+      "otros_beneficios": ""
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+Santo+Tom%C3%A1s+de+Aquino/@18.6957098,-98.5391565,17z/data=!3m1!4b1!4m6!3m5!1s0x85ce553132bdbbb1:0xf73627849802e5f2!8m2!3d18.6957047!4d-98.5365816!16s%2Fg%2F11fm3msm39?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
   {
     "id": "CP041",
     "zone": null,
     "deanery": null,
     "name": "San Isidro Labrador, Granjas de San Isidro",
+    "parishPriest": "Jesús Israel Mercado",
+    "coordinator": "Rosa Aparicio Villar",
+    "secretary": "Germán De Jesús",
+    "treasurer": "Naty Xoxotla De Jesús",
     "address": "14 Sur S/N, Col. San Isidro, Cp. 72590",
     "phones": [
       "2222239103",
@@ -706,13 +1113,25 @@
       "banco_de_medicamentos",
       "dispensario"
     ],
-    "mapsUrl": "https://www.google.com/maps/search/parroquia+san+isidro+labrador/@19.0410002,-98.2412629,13z?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+    "serviceSchedules": {
+      "aparatos_ortopedicos": "",
+      "banco_de_medicamentos": "",
+      "dispensario": ""
+    },
+    "mapsUrl": "https://maps.app.goo.gl/mgCTU9wpTyh83eERA"
   },
+
+
   {
     "id": "CP042",
     "zone": null,
     "deanery": null,
     "name": "San Rafael Arcángel, Tlanalapan",
+    "parishPriest": "Jorge Rufino López Isidoro",
+    "coordinator": "Érika de Regil Salinas",
+    "secretary": "Luis Huerta Esparza",
+    "vocal1": "María Luisa Altamirano Juárez",
+    "otherBenefitsDetails": "Terapia de lenguaje: martes, miércoles y jueves, de 9:00 a 13:00 horas. Enfermería: miércoles y jueves, de 9:00 a 13:00 horas.",
     "address": "Av. Nacional esq. 5 de mayo, San Rafael, Tlanalapan, Puebla",
     "phones": [
       "2481966833",
@@ -727,13 +1146,31 @@
       "fisioterapia",
       "otros_beneficios"
     ],
+    "serviceSchedules": {
+      "aparatos_ortopedicos": "Lunes a Viernes: 09:00 - 13:00",
+      "apoyo_psicologico": "Lunes a Viernes: 09:00 - 13:00",
+      "banco_de_medicamentos": "Lunes a Viernes: 09:00 - 13:00",
+      "consultas_medicas": "Lunes a Viernes: 09:00 - 13:00",
+      "dispensario": "Lunes a Viernes: 09:00 - 13:00",
+      "fisioterapia": "Lunes, Miércoles y Viernes : 09:00 - 13:00",
+      "otros_beneficios": ""
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+de+San+Rafael+Arcangel+Tlanalapan/@19.2954447,-98.4685727,17z/data=!3m1!4b1!4m6!3m5!1s0x85cfd4be9a0da56d:0xde75b0d5f565be98!8m2!3d19.2954397!4d-98.4659978!16s%2Fg%2F11c45c8807?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
   {
     "id": "CP043",
     "zone": null,
     "deanery": null,
     "name": "Nuestra Señora de Guadalupe, Xaltipan",
+    "parishPriest": "Leodegario Morales Marcelino",
+    "coordinator": "Juan Carlos Herrera Mérida",
+    "secretary": "Silvia Durán Altamirano",
+    "treasurer": "Victoria Hernández Cortés",
+    "vocal1": "Agustín Santos Rojas",
+    "vocal2": "Alejandro Altamirano Murrieta",
+    "vocal3": "Simplicia Apolinar Murrieta",
     "address": "Calle Antonio Julián Zapata, Esquina con Calle Guadalupana., 73972",
     "phones": [
       "2288266513",
@@ -748,13 +1185,31 @@
       "servicios_eucaristicos_hospitales",
       "visitas_personas_privadas_libertad"
     ],
+    "serviceSchedules": {
+      "aparatos_ortopedicos": "De Martes a Sábados, sin horario específico",
+      "asistencia_en_desastres": "De Martes a Sábados, sin horario específico",
+      "bazar": "De Martes a Sábados, sin horario específico",
+      "despensas_parroquia": "De Martes a Sábados, sin horario específico",
+      "envio_pacientes_clinica_fundacion": "De Martes a Sábados, sin horario específico",
+      "servicios_eucaristicos_hospitales": "De Martes a Sábados, sin horario específico",
+      "visitas_personas_privadas_libertad": "De Martes a Sábados, sin horario específico"
+    },
     "mapsUrl": "https://www.google.com/maps/place/La+Guadalupana+%26+Antonio+Juli%C3%A1n+Zapata,+D%C3%A9cima,+73972+Xaltipan,+Pue./@19.7634967,-97.3362481,17z/data=!3m1!4b1!4m6!3m5!1s0x85dac23763a39d37:0xcc77705e3e285c3!8m2!3d19.7634917!4d-97.3336732!16s%2Fg%2F11gd_3__88?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
   },
+
+
+
   {
     "id": "CP044",
     "zone": null,
     "deanery": null,
     "name": "Nuestra Señora de la Esperanza",
+    "parishPriest": "Valentín Amastal Amastal",
+    "coordinator": "Cristina Rosales Ibarra",
+    "secretary": "Lucía Lechuga López",
+    "treasurer": "Anabel Enriquez Lechuga",
+    "vocal1": "Manuel García Romero",
+    "vocal2": "Rosa Elena Rodríguez Rosales",
     "address": "Calle 7 Norte No. 42, Primera Sección, Cp 75560 Esperanza, Pue. México",
     "phones": [
       "2451067500",
@@ -763,6 +1218,9 @@
     "services": [
       "despensas_banco_alimentos"
     ],
+    "serviceSchedules": {
+      "despensas_banco_alimentos": "Sábados, sin horario específico"
+    },
     "mapsUrl": "https://www.google.com/maps/place/Parroquia+De+Nuestra+Se%C3%B1ora+De+La+Esperanza/@18.8618197,-97.3774866,834m/data=!3m2!1e3!4b1!4m6!3m5!1s0x85c51272378b3137:0x5cc374afc83492b7!8m2!3d18.8618197!4d-97.3774866!16s%2Fg%2F11c4cv2dkc?hl=es-419&entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D"
   }
 ]

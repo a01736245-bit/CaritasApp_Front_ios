@@ -93,7 +93,7 @@ struct ServicesFlowView: View {
             )
         case .zoneSelection(let serviceId):
             ZoneSelectionView(
-                zones: centerRepository.zones(),
+                zones: centerRepository.availableZones(serviceId: serviceId),
                 loadFailed: centerRepository.didFailToLoad,
                 onZoneSelected: { path.append(.centers(serviceId: serviceId, zone: $0)) },
                 onBack: goBack

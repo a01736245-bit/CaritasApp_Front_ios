@@ -35,6 +35,14 @@ struct CenterCard: View {
                         .padding(.top, 6)
                 }
 
+                ForEach(center.highlightedSchedules(forServiceId: highlightServiceId), id: \.service) { item in
+                    Text("Horario de \(item.service): \(item.schedule)")
+                        .font(CariTypography.bodyMedium)
+                        .bold()
+                        .foregroundStyle(Color.cariNavy)
+                        .padding(.top, 8)
+                }
+
                 HStack(spacing: 0) {
                     Spacer()
                     Text("Ver detalles")

@@ -7,6 +7,10 @@ struct CenterDetailView: View {
     let onBack: () -> Void
 
     @Environment(\.openURL) private var openURL
+    @State private var alertMessage: String?
+
+    private static let phoneErrorMessage = "No fue posible abrir la aplicación Teléfono en este dispositivo."
+    private static let linkErrorMessage = "No fue posible abrir el enlace en este dispositivo."
 
     private var zoneLine: String {
         [center.zone.map(formatZoneLabel), center.deanery]
@@ -15,20 +19,7 @@ struct CenterDetailView: View {
     }
 
     private var speakableText: String {
-        let services = center.services.isEmpty
-            ? nil
-            : "Servicios: "
-                + center.services
-                    .map { displayServiceLabel(ExcelServiceCatalog.labelFor($0)) }
-                    .joined(separator: ", ")
-                + "."
-        return joinSpeakable(
-            center.name,
-            [center.zone.map(formatZoneLabel), center.deanery].compactMap { $0 }.joined(separator: ", "),
-            "Dirección: \(center.address)",
-            center.phones.isEmpty ? nil : "Teléfono: " + center.phones.joined(separator: ", "),
-            services
-        )
+        centerDetailSpeakableText(center)
     }
 
     var body: some View {
@@ -73,18 +64,60 @@ struct CenterDetailView: View {
                         }
                     }
 
+                    if !center.parishResponsibles.isEmpty {
+                        DetailCard(title: "Responsables de la parroquia") {
+                            VStack(alignment: .leading, spacing: 10) {
+                                ForEach(center.parishResponsibles, id: \.role) { item in
+                                    VStack(alignment: .leading, spacing: 0) {
+                                        Text(item.role)
+                                            .font(CariTypography.labelLarge)
+                                            .foregroundStyle(Color.cariNavy)
+                                        Text(item.name)
+                                            .font(CariTypography.bodyMedium)
+                                            .foregroundStyle(Color.cariNavyMuted)
+                                    }
+                                    .accessibilityElement(children: .combine)
+                                }
+                            }
+                        }
+                    }
+
                     if !center.services.isEmpty {
                         DetailCard(title: "Servicios") {
                             VStack(alignment: .leading, spacing: 8) {
                                 ForEach(center.services, id: \.self) { key in
                                     HStack(alignment: .top, spacing: 8) {
                                         Text("•")
+                                            .font(CariTypography.bodyMedium)
                                             .foregroundStyle(Color.cariRed)
-                                        Text(displayServiceLabel(ExcelServiceCatalog.labelFor(key)))
-                                            .foregroundStyle(Color.cariNavyMuted)
+                                            .accessibilityHidden(true)
+                                        VStack(alignment: .leading, spacing: 4) {
+                                            Text(displayServiceLabel(ExcelServiceCatalog.labelFor(key)))
+                                                .font(CariTypography.bodyMedium)
+                                                .foregroundStyle(Color.cariNavyMuted)
+                                            Text(scheduleText(for: key))
+                                                .font(CariTypography.bodyMedium)
+                                                .foregroundStyle(Color.cariNavy)
+                                        }
                                     }
-                                    .font(CariTypography.bodyMedium)
+                                    .accessibilityElement(children: .combine)
                                 }
+                            }
+                        }
+                    }
+
+                    if center.offersOtherBenefits {
+                        DetailCard(title: "Otros beneficios") {
+                            VStack(alignment: .leading, spacing: 8) {
+                                if let details = center.otherBenefitsDetails,
+                                   !details.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                                    Text(details)
+                                        .font(CariTypography.bodyMedium)
+                                        .foregroundStyle(Color.cariNavyMuted)
+                                }
+                                Text(otherBenefitsNotice)
+                                    .font(CariTypography.bodyMedium)
+                                    .foregroundStyle(Color.cariNavy)
                             }
                         }
                     }
@@ -92,7 +125,7 @@ struct CenterDetailView: View {
                     if let mapsURL = center.mapsURL {
                         PrimaryButton(
                             title: "Cómo llegar",
-                            action: { openURL(mapsURL) },
+                            action: { open(mapsURL, errorMessage: Self.linkErrorMessage) },
                             systemImage: "mappin.circle.fill"
                         )
                         .padding(.top, 4)
@@ -104,6 +137,31 @@ struct CenterDetailView: View {
             }
         }
         .background(Color.cariBackground)
+        .alert(
+            alertMessage ?? "",
+            isPresented: Binding(
+                get: { alertMessage != nil },
+                set: { if !$0 { alertMessage = nil } }
+            )
+        ) {
+            Button("Aceptar", role: .cancel) {}
+        }
+    }
+
+    private func scheduleText(for key: String) -> String {
+        if let schedule = center.schedule(forServiceKey: key) {
+            return "Días y horarios: \(schedule)"
+        }
+        return "Llama a esta parroquia para consultar días y horarios."
+    }
+
+    /// Pide al sistema abrir el enlace; si no puede, muestra el aviso indicado.
+    private func open(_ url: URL, errorMessage: String) {
+        openURL(url) { accepted in
+            if !accepted {
+                alertMessage = errorMessage
+            }
+        }
     }
 
     /// Abre el sistema de llamadas con el número; el usuario confirma la llamada.
@@ -122,9 +180,9 @@ struct CenterDetailView: View {
         .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
         .contentShape(Rectangle())
 
-        if let url = phoneURL(phone) {
+        if let url = phoneDialURL(phone) {
             Button {
-                openURL(url)
+                open(url, errorMessage: Self.phoneErrorMessage)
             } label: {
                 label
             }
@@ -133,11 +191,6 @@ struct CenterDetailView: View {
         } else {
             label
         }
-    }
-
-    private func phoneURL(_ phone: String) -> URL? {
-        let dialable = phone.filter { $0.isNumber || $0 == "+" }
-        return dialable.isEmpty ? nil : URL(string: "tel:\(dialable)")
     }
 }
 
