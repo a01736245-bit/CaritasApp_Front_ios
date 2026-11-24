@@ -16,13 +16,15 @@ enum CollaborateSection {
 }
 
 struct AppTabView: View {
+    @Environment(SpeechService.self) private var speech: SpeechService?
+
     @State private var selectedTab: AppTab = .inicio
     @State private var collaborateSection: CollaborateSection = .voluntariado
     @State private var servicesPath: [ServicesRoute] = []
     @State private var collaboratePath: [CollaborateRoute] = []
-    /// Profundidad de la ruta de Servicios en la que se abrió el listado de centros desde
-    /// una donación. Solo existe mientras ese recorrido siga vigente.
-    @State private var donationCentersDepth: Int?
+    /// Pestaña y profundidad de la ruta de Servicios desde las que se abrió un recorrido
+    /// (Donaciones o Ayuda). Solo existe mientras ese recorrido siga vigente.
+    @State private var servicesReturn: ServicesReturn?
 
     init() {
         #if canImport(UIKit)
@@ -58,9 +60,9 @@ struct AppTabView: View {
             Tab("Servicios", systemImage: "square.grid.2x2", value: AppTab.servicios) {
                 ServicesFlowView(
                     path: $servicesPath,
-                    donationCentersDepth: $donationCentersDepth,
+                    servicesReturn: $servicesReturn,
                     onExitToHome: { selectedTab = .inicio },
-                    onReturnToDonations: { selectedTab = .colaborar }
+                    onReturn: { selectedTab = $0 }
                 )
             }
 
@@ -69,13 +71,21 @@ struct AppTabView: View {
                     path: $collaboratePath,
                     section: $collaborateSection,
                     onExitToHome: { selectedTab = .inicio },
-                    onConsultCenters: openCentersFromDonation
+                    onConsultCenters: {
+                        openServices(.centers(serviceId: nil, zone: nil), returningTo: .colaborar)
+                    }
                 )
             }
 
             Tab("Ayuda", systemImage: "questionmark.circle", value: AppTab.ayuda) {
                 NavigationStack {
-                    PlaceholderView(title: "Ayuda")
+                    HelpView(
+                        onGuideTap: { openServices(.guide, returningTo: .ayuda) },
+                        onViewCentersTap: {
+                            openServices(.centers(serviceId: nil, zone: nil), returningTo: .ayuda)
+                        },
+                        onBack: { selectedTab = .inicio }
+                    )
                 }
                 .withHiddenNavigationBar()
             }
@@ -86,21 +96,24 @@ struct AppTabView: View {
         .toolbarBackgroundVisibility(.visible, for: .tabBar)
         #endif
         .onChange(of: selectedTab) { _, newTab in
-            // Al salir de Servicios, el regreso especial hacia Donaciones deja de ser válido.
+            speech?.stop()
+            // Al salir de Servicios, el regreso especial hacia otra pestaña deja de ser válido.
             if newTab != .servicios {
-                donationCentersDepth = nil
+                servicesReturn = nil
             }
         }
+        .onChange(of: servicesPath) { speech?.stop() }
+        .onChange(of: collaboratePath) { speech?.stop() }
+        .onChange(of: collaborateSection) { speech?.stop() }
     }
 
-    /// Abre el directorio general de centros sobre la ruta actual de Servicios y
-    /// recuerda el origen para que Atrás vuelva al detalle de la donación.
-    private func openCentersFromDonation() {
-        let centersRoute = ServicesRoute.centers(serviceId: nil, zone: nil)
-        if servicesPath.last != centersRoute {
-            servicesPath.append(centersRoute)
+    /// Abre una ruta de Servicios sobre la ruta actual y recuerda la pestaña de origen,
+    /// para que Atrás desde esa primera pantalla regrese a ella.
+    private func openServices(_ route: ServicesRoute, returningTo origin: AppTab) {
+        if servicesPath.last != route {
+            servicesPath.append(route)
         }
-        donationCentersDepth = servicesPath.count
+        servicesReturn = ServicesReturn(tab: origin, depth: servicesPath.count)
         selectedTab = .servicios
     }
 }

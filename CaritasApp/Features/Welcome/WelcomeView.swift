@@ -3,6 +3,15 @@ import SwiftUI
 struct WelcomeView: View {
     let onEmpezar: () -> Void
 
+    private var speakableText: String {
+        joinSpeakable(
+            "Bienvenido a CARI Vita",
+            "Una aplicación de Cáritas Puebla",
+            "¡Únete a nuestra causa y sé un héroe para un desprotegido!",
+            "Puedes consultar la información sin crear una cuenta."
+        )
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
@@ -29,7 +38,7 @@ struct WelcomeView: View {
 
                     Spacer()
 
-                    ListenButton(onTap: {})
+                    ListenButton(speakableText: speakableText)
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 12)

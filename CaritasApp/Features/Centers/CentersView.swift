@@ -10,9 +10,19 @@ struct CentersView: View {
     let onChooseOtherZone: () -> Void
     let onBack: () -> Void
 
+    private var speakableText: String {
+        joinSpeakable(
+            "Centros de ayuda",
+            "Elige el lugar que mejor se adapte a tu necesidad. Después, si lo deseas, puedes consultar el mapa.",
+            loadFailed
+                ? "No pudimos cargar los centros. Intenta de nuevo más tarde."
+                : centersSpeakableSummary(centers)
+        )
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(onBack: onBack)
+            CariTopBar(onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {

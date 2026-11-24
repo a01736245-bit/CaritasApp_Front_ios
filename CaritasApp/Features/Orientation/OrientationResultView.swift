@@ -6,9 +6,24 @@ struct OrientationResultView: View {
     let onSeeServices: () -> Void
     let onBack: () -> Void
 
+    @Environment(SpeechService.self) private var speech: SpeechService?
+
+    private var speakableText: String {
+        if results.isEmpty {
+            let neutral = OrientationCatalog.neutralResult
+            return joinSpeakable(neutral.title, neutral.message, "Puedes tocar Ver servicios.")
+        }
+        var parts: [String?] = ["Te sugerimos estas opciones"]
+        for result in results {
+            parts.append(result.title)
+            parts.append(result.message)
+        }
+        return joinSpeakable(parts: parts)
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(onBack: onBack)
+            CariTopBar(onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(spacing: 0) {
@@ -23,6 +38,7 @@ struct OrientationResultView: View {
             }
         }
         .background(Color.cariBackground)
+        .onDisappear { speech?.stop() }
     }
 
     private var recommendationsContent: some View {

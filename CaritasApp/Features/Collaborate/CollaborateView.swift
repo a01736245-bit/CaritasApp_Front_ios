@@ -9,9 +9,29 @@ struct CollaborateView: View {
     let onDonationItemTap: (String) -> Void
     let onBack: () -> Void
 
+    /// Lee el contenido de la sección activa; al cambiar de chip se detiene la lectura.
+    private var speakableText: String {
+        switch section {
+        case .voluntariado:
+            return joinSpeakable(
+                "Forma parte del equipo",
+                "Tu tiempo y experiencia pueden ayudar a otras personas.",
+                VolunteerCatalog.opportunities
+                    .map { "\($0.title). \($0.shortDescription)" }
+                    .joined(separator: " ")
+            )
+        case .donaciones:
+            return joinSpeakable(
+                DonationsView.title,
+                DonationsView.subtitle,
+                DonationCatalog.items.map { "\($0.title)." }.joined(separator: " ")
+            )
+        }
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(onBack: onBack)
+            CariTopBar(onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {

@@ -15,9 +15,24 @@ struct VolunteerApplicationInfoView: View {
         "Presiona Enviar dentro del formulario."
     ]
 
+    /// Texto fijo: nunca incluye la dirección del formulario.
+    private var speakableText: String {
+        var parts: [String?] = [
+            "Cómo postularte",
+            "Para participar como voluntario, completa el formulario de postulación."
+        ]
+        for (index, step) in Self.steps.enumerated() {
+            parts.append("Paso \(index + 1). \(step)")
+        }
+        parts.append("El formulario se abrirá fuera de CARI Vita.")
+        parts.append("CARI Vita no guarda los datos que escribas en el formulario.")
+        parts.append("Botón: Abrir formulario.")
+        return joinSpeakable(parts: parts)
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(title: "Cómo postularte", onBack: onBack)
+            CariTopBar(title: "Cómo postularte", onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {

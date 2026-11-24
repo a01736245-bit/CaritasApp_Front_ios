@@ -21,9 +21,18 @@ struct ServicesView: View {
         ServiceCatalog.findCategory(Self.spiritualCategoryId)
     }
 
+    private var speakableText: String {
+        joinSpeakable(
+            "¿Qué necesitas?",
+            "Elige la opción que mejor se acerque a lo que necesitas.",
+            ServiceCatalog.categories.map { "\($0.title)." }.joined(separator: " "),
+            "No sé cuál elegir. Podemos orientarte con unas preguntas."
+        )
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(onBack: onBack)
+            CariTopBar(onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {

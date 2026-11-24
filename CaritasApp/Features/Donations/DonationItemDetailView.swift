@@ -7,9 +7,19 @@ struct DonationItemDetailView: View {
     let onConsultCenters: () -> Void
     let onBack: () -> Void
 
+    private var speakableText: String {
+        joinSpeakable(
+            item.title,
+            item.category.map { "Categoría: \($0)" },
+            item.conditions.map { "Características o condiciones: \($0)" },
+            item.purpose.map { "¿Para qué se usa? \($0)" },
+            item.hasInfo ? nil : pendingSpeakableText
+        )
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(title: item.title, onBack: onBack)
+            CariTopBar(title: item.title, onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {

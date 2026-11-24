@@ -5,9 +5,20 @@ struct CategoryView: View {
     let onServiceTap: (String) -> Void
     let onBack: () -> Void
 
+    private var speakableText: String {
+        let services = category.services.isEmpty
+            ? "Aún no hay servicios confirmados para esta categoría."
+            : category.services.map { "\($0.title)." }.joined(separator: " ")
+        return joinSpeakable(
+            category.title,
+            "Elige el servicio que necesitas. Estamos para acompañarte.",
+            services
+        )
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(onBack: onBack)
+            CariTopBar(onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {

@@ -8,9 +8,20 @@ struct OrientationQuestionView: View {
     let onAnswerSelected: (OrientationAnswerValue) -> Void
     let onBack: () -> Void
 
+    @Environment(SpeechService.self) private var speech: SpeechService?
+
+    private var speakableText: String {
+        joinSpeakable(
+            "Pregunta \(questionNumber) de \(totalQuestions)",
+            question.text,
+            "Elige la respuesta que más se acerque a lo que necesitas.",
+            question.answers.map { "\($0.label)." }.joined(separator: " ")
+        )
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(onBack: onBack)
+            CariTopBar(onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
@@ -52,5 +63,7 @@ struct OrientationQuestionView: View {
             }
         }
         .background(Color.cariBackground)
+        // Cada pregunta es una vista nueva: al avanzar o regresar se detiene la lectura anterior.
+        .onDisappear { speech?.stop() }
     }
 }

@@ -4,9 +4,13 @@ struct PlaceholderView: View {
     let title: String
     var onBack: (() -> Void)? = nil
 
+    private var speakableText: String {
+        joinSpeakable(title, "Esta sección está en desarrollo. Próximamente estará disponible.")
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(onBack: onBack)
+            CariTopBar(onBack: onBack, speakableText: speakableText)
 
             Spacer()
 

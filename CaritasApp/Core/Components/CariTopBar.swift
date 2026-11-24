@@ -3,6 +3,8 @@ import SwiftUI
 struct CariTopBar: View {
     var title: String? = nil
     var onBack: (() -> Void)? = nil
+    /// Texto que lee el botón de audio. Sin texto, el botón queda deshabilitado.
+    var speakableText: String? = nil
 
     var body: some View {
         VStack(spacing: 0) {
@@ -35,7 +37,7 @@ struct CariTopBar: View {
                     Spacer()
                 }
 
-                ListenButton(onTap: {})
+                ListenButton(speakableText: speakableText)
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 10)

@@ -5,13 +5,16 @@ import SwiftUI
 struct DonationsView: View {
     let onItemTap: (String) -> Void
 
+    static let title = "¿Qué necesita Cáritas?"
+    static let subtitle = "Consulta algunos artículos que puedes donar y conoce su información disponible. También puedes revisar el directorio general de centros."
+
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("¿Qué necesita Cáritas?")
+            Text(Self.title)
                 .font(CariTypography.headlineLarge)
                 .foregroundStyle(Color.cariNavy)
 
-            Text("Consulta algunos artículos que puedes donar y conoce su información disponible. También puedes revisar el directorio general de centros.")
+            Text(Self.subtitle)
                 .font(CariTypography.bodyLarge)
                 .foregroundStyle(Color.cariNavy)
                 .padding(.top, 8)

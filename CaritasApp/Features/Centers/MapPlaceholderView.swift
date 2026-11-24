@@ -16,9 +16,19 @@ struct MapPlaceholderView: View {
         return centers.indices.contains(selectedIndex) ? centers[selectedIndex] : centers[0]
     }
 
+    private var speakableText: String {
+        joinSpeakable(
+            "Mapa de centros",
+            "El mapa es una ayuda para orientarte.",
+            loadFailed
+                ? "No pudimos cargar los centros. Intenta de nuevo más tarde."
+                : centersSpeakableSummary(centers)
+        )
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(title: "Mapa de centros", onBack: onBack)
+            CariTopBar(title: "Mapa de centros", onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {

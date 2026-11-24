@@ -7,9 +7,28 @@ struct VolunteerOpportunityDetailView: View {
 
     private let activityCheckColor = Color(red: 0x2E / 255, green: 0x7D / 255, blue: 0x32 / 255)
 
+    private var speakableText: String {
+        joinSpeakable(
+            opportunity.title,
+            opportunity.shortDescription,
+            opportunity.activities.isEmpty
+                ? nil
+                : "¿Qué actividades se realizan? "
+                    + opportunity.activities.map { "\($0)." }.joined(separator: " "),
+            opportunity.whoCanParticipate.map { "¿Quién puede participar? \($0)" },
+            opportunity.schedule.map { "Horario: \($0)" },
+            opportunity.location.map { "Ubicación: \($0)" },
+            opportunity.requirements.isEmpty
+                ? nil
+                : "Requisitos: " + opportunity.requirements.joined(separator: ", "),
+            opportunity.contact.map { "Contacto: \($0)" },
+            opportunity.hasDetail ? nil : pendingSpeakableText
+        )
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(title: opportunity.title, onBack: onBack)
+            CariTopBar(title: opportunity.title, onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {

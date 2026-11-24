@@ -1,14 +1,20 @@
 import SwiftUI
 
+/// Origen temporal de un recorrido de Servicios abierto desde otra pestaña (Donaciones
+/// o Ayuda): la pestaña a la que se regresa y la profundidad de la ruta en la que empezó.
+struct ServicesReturn: Equatable {
+    let tab: AppTab
+    let depth: Int
+}
+
 /// Pila de navegación de la pestaña Servicios. La ruta vive en `AppTabView`
 /// para conservarse al cambiar de pestaña.
 struct ServicesFlowView: View {
     @Binding var path: [ServicesRoute]
-    /// Profundidad de la ruta en la que se abrió el listado de centros desde una
-    /// donación; es nil cuando el recorrido no proviene de Donaciones.
-    @Binding var donationCentersDepth: Int?
+    /// Es nil cuando el recorrido actual no proviene de otra pestaña.
+    @Binding var servicesReturn: ServicesReturn?
     let onExitToHome: () -> Void
-    let onReturnToDonations: () -> Void
+    let onReturn: (AppTab) -> Void
 
     private let centerRepository = CenterRepository.shared
 
@@ -26,11 +32,11 @@ struct ServicesFlowView: View {
             }
         }
         .onChange(of: path.count) { _, newCount in
-            // Al salir del listado abierto desde una donación (con la flecha Atrás o con
-            // el gesto del sistema) se vuelve a Colaborar. El marcador se limpia antes.
-            guard let depth = donationCentersDepth, newCount < depth else { return }
-            donationCentersDepth = nil
-            onReturnToDonations()
+            // Al salir de la primera pantalla abierta desde otra pestaña (con la flecha
+            // Atrás o con el gesto del sistema) se regresa a ella. El marcador se limpia antes.
+            guard let origin = servicesReturn, newCount < origin.depth else { return }
+            servicesReturn = nil
+            onReturn(origin.tab)
         }
     }
 

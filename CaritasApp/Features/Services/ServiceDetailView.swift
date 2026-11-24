@@ -5,9 +5,19 @@ struct ServiceDetailView: View {
     let onVerLugares: () -> Void
     let onBack: () -> Void
 
+    private var speakableText: String {
+        let sections = service.sections.map { section -> String in
+            let body = section.paragraphs.isEmpty
+                ? pendingSpeakableText
+                : section.paragraphs.map { joinSpeakable($0.label, $0.text) }.joined(separator: " ")
+            return joinSpeakable(section.title, body)
+        }
+        return joinSpeakable(service.title, sections.joined(separator: " "))
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(title: service.title, onBack: onBack)
+            CariTopBar(title: service.title, onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {

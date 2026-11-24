@@ -7,9 +7,17 @@ struct LocationChoiceView: View {
     let onChooseZone: () -> Void
     let onBack: () -> Void
 
+    private var speakableText: String {
+        joinSpeakable(
+            "¿Cómo quieres ver los lugares?",
+            "Puedes ver todos los centros disponibles o elegir tu zona para ver solo los de esa zona.",
+            "No necesitas compartir tu ubicación para consultar los centros."
+        )
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(onBack: onBack)
+            CariTopBar(onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(spacing: 0) {

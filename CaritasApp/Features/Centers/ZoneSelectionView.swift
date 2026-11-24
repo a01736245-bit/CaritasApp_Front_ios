@@ -6,9 +6,17 @@ struct ZoneSelectionView: View {
     let onZoneSelected: (String) -> Void
     let onBack: () -> Void
 
+    private var speakableText: String {
+        joinSpeakable(
+            "Elige tu zona",
+            "Selecciona la zona más cercana a ti para ver los centros disponibles.",
+            zones.map { "\(formatZoneLabel($0))." }.joined(separator: " ")
+        )
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(onBack: onBack)
+            CariTopBar(onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {

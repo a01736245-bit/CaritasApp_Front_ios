@@ -14,9 +14,26 @@ struct CenterDetailView: View {
             .joined(separator: " · ")
     }
 
+    private var speakableText: String {
+        let services = center.services.isEmpty
+            ? nil
+            : "Servicios: "
+                + center.services
+                    .map { displayServiceLabel(ExcelServiceCatalog.labelFor($0)) }
+                    .joined(separator: ", ")
+                + "."
+        return joinSpeakable(
+            center.name,
+            [center.zone.map(formatZoneLabel), center.deanery].compactMap { $0 }.joined(separator: ", "),
+            "Dirección: \(center.address)",
+            center.phones.isEmpty ? nil : "Teléfono: " + center.phones.joined(separator: ", "),
+            services
+        )
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            CariTopBar(title: center.name, onBack: onBack)
+            CariTopBar(title: center.name, onBack: onBack, speakableText: speakableText)
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 14) {
