@@ -4,7 +4,11 @@ import SwiftUI
 /// para conservarse al cambiar de pestaña.
 struct ServicesFlowView: View {
     @Binding var path: [ServicesRoute]
+    /// Profundidad de la ruta en la que se abrió el listado de centros desde una
+    /// donación; es nil cuando el recorrido no proviene de Donaciones.
+    @Binding var donationCentersDepth: Int?
     let onExitToHome: () -> Void
+    let onReturnToDonations: () -> Void
 
     private let centerRepository = CenterRepository.shared
 
@@ -20,6 +24,13 @@ struct ServicesFlowView: View {
                 destination(for: route)
                     .withHiddenNavigationBar()
             }
+        }
+        .onChange(of: path.count) { _, newCount in
+            // Al salir del listado abierto desde una donación (con la flecha Atrás o con
+            // el gesto del sistema) se vuelve a Colaborar. El marcador se limpia antes.
+            guard let depth = donationCentersDepth, newCount < depth else { return }
+            donationCentersDepth = nil
+            onReturnToDonations()
         }
     }
 

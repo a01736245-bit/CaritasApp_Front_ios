@@ -4,4 +4,5 @@ import Foundation
 enum CollaborateRoute: Hashable {
     case volunteerDetail(id: String)
     case volunteerApplication
+    case donationDetail(id: String)
 }

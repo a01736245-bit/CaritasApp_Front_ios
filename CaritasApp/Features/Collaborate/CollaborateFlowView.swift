@@ -6,6 +6,7 @@ struct CollaborateFlowView: View {
     @Binding var path: [CollaborateRoute]
     @Binding var section: CollaborateSection
     let onExitToHome: () -> Void
+    let onConsultCenters: () -> Void
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -13,6 +14,7 @@ struct CollaborateFlowView: View {
                 section: $section,
                 onOpportunityInfo: { path.append(.volunteerDetail(id: $0)) },
                 onOpportunityApply: { path.append(.volunteerApplication) },
+                onDonationItemTap: { path.append(.donationDetail(id: $0)) },
                 onBack: onExitToHome
             )
             .withHiddenNavigationBar()
@@ -38,6 +40,16 @@ struct CollaborateFlowView: View {
             }
         case .volunteerApplication:
             VolunteerApplicationInfoView(onBack: goBack)
+        case .donationDetail(let id):
+            if let item = DonationCatalog.findById(id) {
+                DonationItemDetailView(
+                    item: item,
+                    onConsultCenters: onConsultCenters,
+                    onBack: goBack
+                )
+            } else {
+                PlaceholderView(title: "Artículo", onBack: goBack)
+            }
         }
     }
 

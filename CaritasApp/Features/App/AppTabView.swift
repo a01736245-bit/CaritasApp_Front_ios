@@ -20,6 +20,9 @@ struct AppTabView: View {
     @State private var collaborateSection: CollaborateSection = .voluntariado
     @State private var servicesPath: [ServicesRoute] = []
     @State private var collaboratePath: [CollaborateRoute] = []
+    /// Profundidad de la ruta de Servicios en la que se abrió el listado de centros desde
+    /// una donación. Solo existe mientras ese recorrido siga vigente.
+    @State private var donationCentersDepth: Int?
 
     init() {
         #if canImport(UIKit)
@@ -55,7 +58,9 @@ struct AppTabView: View {
             Tab("Servicios", systemImage: "square.grid.2x2", value: AppTab.servicios) {
                 ServicesFlowView(
                     path: $servicesPath,
-                    onExitToHome: { selectedTab = .inicio }
+                    donationCentersDepth: $donationCentersDepth,
+                    onExitToHome: { selectedTab = .inicio },
+                    onReturnToDonations: { selectedTab = .colaborar }
                 )
             }
 
@@ -63,7 +68,8 @@ struct AppTabView: View {
                 CollaborateFlowView(
                     path: $collaboratePath,
                     section: $collaborateSection,
-                    onExitToHome: { selectedTab = .inicio }
+                    onExitToHome: { selectedTab = .inicio },
+                    onConsultCenters: openCentersFromDonation
                 )
             }
 
@@ -79,6 +85,23 @@ struct AppTabView: View {
         .toolbarBackground(Color.cariBackground, for: .tabBar)
         .toolbarBackgroundVisibility(.visible, for: .tabBar)
         #endif
+        .onChange(of: selectedTab) { _, newTab in
+            // Al salir de Servicios, el regreso especial hacia Donaciones deja de ser válido.
+            if newTab != .servicios {
+                donationCentersDepth = nil
+            }
+        }
+    }
+
+    /// Abre el directorio general de centros sobre la ruta actual de Servicios y
+    /// recuerda el origen para que Atrás vuelva al detalle de la donación.
+    private func openCentersFromDonation() {
+        let centersRoute = ServicesRoute.centers(serviceId: nil, zone: nil)
+        if servicesPath.last != centersRoute {
+            servicesPath.append(centersRoute)
+        }
+        donationCentersDepth = servicesPath.count
+        selectedTab = .servicios
     }
 }
 

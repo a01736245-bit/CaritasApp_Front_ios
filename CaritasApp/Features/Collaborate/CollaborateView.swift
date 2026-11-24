@@ -6,6 +6,7 @@ struct CollaborateView: View {
     @Binding var section: CollaborateSection
     let onOpportunityInfo: (String) -> Void
     let onOpportunityApply: () -> Void
+    let onDonationItemTap: (String) -> Void
     let onBack: () -> Void
 
     var body: some View {
@@ -36,7 +37,7 @@ struct CollaborateView: View {
                     case .voluntariado:
                         volunteerContent
                     case .donaciones:
-                        donationsContent
+                        DonationsView(onItemTap: onDonationItemTap)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -78,31 +79,6 @@ struct CollaborateView: View {
         }
     }
 
-    /// Contenido provisional hasta que se implemente la sección de donaciones.
-    private var donationsContent: some View {
-        VStack(spacing: 0) {
-            Image(systemName: "wrench.and.screwdriver")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 48, height: 48)
-                .foregroundStyle(Color.cariNavyMuted)
-                .padding(.bottom, 16)
-                .accessibilityHidden(true)
-
-            Text("Donar productos")
-                .font(CariTypography.titleMedium)
-                .foregroundStyle(Color.cariNavy)
-                .multilineTextAlignment(.center)
-
-            Text("Esta sección está en desarrollo. Próximamente estará disponible.")
-                .font(CariTypography.bodyMedium)
-                .foregroundStyle(Color.cariNavyMuted)
-                .multilineTextAlignment(.center)
-                .padding(.top, 8)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 32)
-    }
 }
 
 private struct SectionChip: View {
