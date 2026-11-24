@@ -1,25 +1,26 @@
 import SwiftUI
 
-/// Mapa provisional: es una ilustración, no un mapa real. Los pines siguen un
-/// patrón fijo y no representan ubicaciones geográficas.
+/// Mapa ilustrativo: la imagen es de fondo y los pines se reparten en una cuadrícula.
+/// No es un mapa real ni los pines representan ubicaciones geográficas.
 struct MapPlaceholderView: View {
     let centers: [Center]
     let loadFailed: Bool
     let onBackToList: () -> Void
     let onBack: () -> Void
 
-    @State private var selectedIndex = 0
+    @State private var selectedCenterId: String?
+    @State private var showLinkError = false
     @Environment(\.openURL) private var openURL
 
+    /// Centro seleccionado; si ya no está en la lista, el primero disponible.
     private var selectedCenter: Center? {
-        guard !centers.isEmpty else { return nil }
-        return centers.indices.contains(selectedIndex) ? centers[selectedIndex] : centers[0]
+        centers.first { $0.id == selectedCenterId } ?? centers.first
     }
 
     private var speakableText: String {
         joinSpeakable(
             "Mapa de centros",
-            "El mapa es una ayuda para orientarte.",
+            "Mapa ilustrativo. Consulta la ubicación exacta en Cómo llegar.",
             loadFailed
                 ? "No pudimos cargar los centros. Intenta de nuevo más tarde."
                 : centersSpeakableSummary(centers)
@@ -48,13 +49,33 @@ struct MapPlaceholderView: View {
             }
         }
         .background(Color.cariBackground)
+        .alert("No fue posible abrir el enlace en este dispositivo.", isPresented: $showLinkError) {
+            Button("Aceptar", role: .cancel) {}
+        }
     }
 
     private func mapContent(selectedCenter: Center) -> some View {
         VStack(alignment: .leading, spacing: 0) {
-            MapPinArea(
-                total: centers.count,
-                selectedIndex: min(max(selectedIndex, 0), centers.count - 1)
+            MapPinLayout(count: centers.count) {
+                ForEach(centers) { center in
+                    MapPinButton(
+                        name: center.name,
+                        isSelected: center.id == selectedCenter.id,
+                        action: { selectedCenterId = center.id }
+                    )
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .background {
+                Image("mapa_centros")
+                    .resizable()
+                    .scaledToFill()
+                    .accessibilityHidden(true)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .strokeBorder(Color.cariBorder, lineWidth: 1)
             )
 
             Text("El mapa es una ayuda para orientarte.")
@@ -74,12 +95,18 @@ struct MapPlaceholderView: View {
                     .font(CariTypography.bodyMedium)
                     .foregroundStyle(Color.cariNavyMuted)
                     .padding(.top, 4)
-                    .padding(.bottom, 14)
+                    .padding(.bottom, selectedCenter.mapsURL == nil ? 0 : 14)
 
                 if let mapsURL = selectedCenter.mapsURL {
                     PrimaryButton(
                         title: "Cómo llegar",
-                        action: { openURL(mapsURL) },
+                        action: {
+                            openURL(mapsURL) { accepted in
+                                if !accepted {
+                                    showLinkError = true
+                                }
+                            }
+                        },
                         systemImage: "mappin.circle.fill"
                     )
                 }
@@ -95,11 +122,11 @@ struct MapPlaceholderView: View {
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
-                    ForEach(Array(centers.enumerated()), id: \.element.id) { index, center in
+                    ForEach(centers) { center in
                         CenterChip(
                             text: center.name,
-                            isSelected: index == selectedIndex,
-                            action: { selectedIndex = index }
+                            isSelected: center.id == selectedCenter.id,
+                            action: { selectedCenterId = center.id }
                         )
                     }
                 }
@@ -133,45 +160,87 @@ struct MapPlaceholderView: View {
     }
 }
 
-/// Área ilustrativa con un pin por centro, en posiciones fijas que se repiten.
-private struct MapPinArea: View {
-    let total: Int
-    let selectedIndex: Int
+// MARK: - Cuadrícula de pines
 
-    private let positions: [(x: Double, y: Double)] = [
-        (-0.6, -0.5), (0.5, -0.6), (-0.2, 0.1),
-        (0.6, 0.4), (-0.7, 0.6), (0.1, -0.2)
-    ]
+/// Cálculo de la cuadrícula de pines: botones de 48 puntos con paso de 56, margen de 8
+/// y altura mínima de 220.
+enum MapPinGrid {
+    static let pinSize: CGFloat = 48
+    static let pitch: CGFloat = 56
+    static let margin: CGFloat = 8
+    static let minHeight: CGFloat = 220
+
+    static func columns(width: CGFloat) -> Int {
+        max(1, Int(width / pitch))
+    }
+
+    static func rows(count: Int, columns: Int) -> Int {
+        max(1, (count + columns - 1) / columns)
+    }
+
+    static func height(rows: Int) -> CGFloat {
+        max(minHeight, CGFloat(rows) * pitch + 16)
+    }
+
+    /// Centro del pin `index` dentro de un área de ancho `width`.
+    static func center(index: Int, count: Int, width: CGFloat) -> CGPoint {
+        let columns = columns(width: width)
+        let rows = rows(count: count, columns: columns)
+        let height = height(rows: rows)
+        let column = index % columns
+        let row = index / columns
+
+        let horizontalBias = columns == 1 ? 0 : -1 + 2 * CGFloat(column) / CGFloat(columns - 1)
+        let verticalBias = rows == 1 ? 0 : -1 + 2 * CGFloat(row) / CGFloat(rows - 1)
+
+        let freeWidth = width - 2 * margin - pinSize
+        let freeHeight = height - 2 * margin - pinSize
+        return CGPoint(
+            x: margin + freeWidth / 2 * (1 + horizontalBias) + pinSize / 2,
+            y: margin + freeHeight / 2 * (1 + verticalBias) + pinSize / 2
+        )
+    }
+}
+
+private struct MapPinLayout: Layout {
+    let count: Int
+
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        let width = proposal.width ?? 320
+        let columns = MapPinGrid.columns(width: width)
+        return CGSize(width: width, height: MapPinGrid.height(rows: MapPinGrid.rows(count: count, columns: columns)))
+    }
+
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        for (index, subview) in subviews.enumerated() {
+            let center = MapPinGrid.center(index: index, count: subviews.count, width: bounds.width)
+            subview.place(
+                at: CGPoint(x: bounds.minX + center.x, y: bounds.minY + center.y),
+                anchor: .center,
+                proposal: ProposedViewSize(width: MapPinGrid.pinSize, height: MapPinGrid.pinSize)
+            )
+        }
+    }
+}
+
+private struct MapPinButton: View {
+    let name: String
+    let isSelected: Bool
+    let action: () -> Void
 
     var body: some View {
-        GeometryReader { geometry in
-            ForEach(0..<total, id: \.self) { index in
-                let isSelected = index == selectedIndex
-                let size: CGFloat = isSelected ? 30 : 24
-                let position = positions[index % positions.count]
-
-                Image(systemName: "mappin")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: size, height: size)
-                    .foregroundStyle(isSelected ? Color.cariRed : Color.cariNavy)
-                    .position(
-                        x: geometry.size.width / 2 + position.x * (geometry.size.width - size) / 2,
-                        y: geometry.size.height / 2 + position.y * (geometry.size.height - size) / 2
-                    )
-            }
+        Button(action: action) {
+            Image(systemName: "mappin")
+                .resizable()
+                .scaledToFit()
+                .frame(width: isSelected ? 30 : 24, height: isSelected ? 30 : 24)
+                .foregroundStyle(isSelected ? Color.cariRed : Color.cariNavy)
+                .frame(width: MapPinGrid.pinSize, height: MapPinGrid.pinSize)
+                .contentShape(Rectangle())
         }
-        .frame(height: 220)
-        .background(
-            Color(red: 237 / 255, green: 240 / 255, blue: 244 / 255),
-            in: RoundedRectangle(cornerRadius: 16)
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .strokeBorder(Color.cariBorder, lineWidth: 1)
-        )
-        .allowsHitTesting(false)
-        .accessibilityHidden(true)
+        .buttonStyle(.plain)
+        .accessibilityLabel("Seleccionar \(name)")
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 }
 
