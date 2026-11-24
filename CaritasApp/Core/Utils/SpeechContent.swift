@@ -19,6 +19,15 @@ func joinSpeakable(_ parts: String?...) -> String {
     joinSpeakable(parts: parts)
 }
 
+/// Teléfono pronunciado dígito por dígito, separado por comas.
+func phoneForSpeech(_ phone: String) -> String {
+    let digitNames = ["cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"]
+    return phone
+        .compactMap { $0.wholeNumberValue }
+        .map { digitNames[$0] }
+        .joined(separator: ", ")
+}
+
 /// Resumen hablado de una lista de centros: cuántos hay y los nombres de los primeros.
 /// Nunca lee la lista completa.
 func centersSpeakableSummary(_ centers: [Center], maxNamed: Int = 3) -> String {

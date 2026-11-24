@@ -19,6 +19,14 @@ struct ServicesFlowView: View {
 
     private let centerRepository = CenterRepository.shared
 
+    /// Servicios con al menos un centro asociado; se calcula una sola vez.
+    private static let availableServiceIds: Set<String> = Set(
+        ServiceCatalog.categories
+            .flatMap(\.services)
+            .map(\.id)
+            .filter { !CenterRepository.shared.findByFilter(serviceId: $0).isEmpty }
+    )
+
     var body: some View {
         NavigationStack(path: $path) {
             ServicesView(
@@ -49,7 +57,12 @@ struct ServicesFlowView: View {
         case .category(let id):
             if let category = ServiceCatalog.findCategory(id) {
                 CategoryView(
-                    category: category,
+                    category: ServiceCategory(
+                        id: category.id,
+                        title: category.title,
+                        systemImage: category.systemImage,
+                        services: category.services.filter { Self.availableServiceIds.contains($0.id) }
+                    ),
                     onServiceTap: { path.append(.service(id: $0)) },
                     onBack: goBack
                 )
@@ -57,7 +70,7 @@ struct ServicesFlowView: View {
                 PlaceholderView(title: "Categoría", onBack: goBack)
             }
         case .service(let id):
-            if let service = ServiceCatalog.findService(id) {
+            if let service = ServiceCatalog.findService(id), Self.availableServiceIds.contains(id) {
                 ServiceDetailView(
                     service: service,
                     onVerLugares: { path.append(.locationChoice(serviceId: service.id)) },

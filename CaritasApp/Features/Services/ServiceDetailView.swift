@@ -5,12 +5,16 @@ struct ServiceDetailView: View {
     let onVerLugares: () -> Void
     let onBack: () -> Void
 
+    @Environment(\.openURL) private var openURL
+    @State private var showCallError = false
+
     private var speakableText: String {
         let sections = service.sections.map { section -> String in
             let body = section.paragraphs.isEmpty
                 ? pendingSpeakableText
                 : section.paragraphs.map { joinSpeakable($0.label, $0.text) }.joined(separator: " ")
-            return joinSpeakable(section.title, body)
+            let phone = section.contactPhone.map { "Teléfono: \(phoneForSpeech($0))" }
+            return joinSpeakable(section.title, body, phone)
         }
         return joinSpeakable(service.title, sections.joined(separator: " "))
     }
@@ -28,11 +32,13 @@ struct ServiceDetailView: View {
                         .padding(.bottom, 18)
 
                     VStack(spacing: 14) {
-                        ForEach(service.sections) { section in
+                        ForEach(Array(service.sections.enumerated()), id: \.element.id) { index, section in
                             InfoAccordion(
                                 title: section.title,
                                 paragraphs: section.paragraphs,
-                                initiallyExpanded: section.id == service.sections.first?.id
+                                initiallyExpanded: index == 0 || section.contactPhone != nil,
+                                callTitle: section.contactPhone.map { "Llamar al \($0)" },
+                                onCall: section.contactPhone.map { phone in { call(phone) } }
                             )
                         }
                     }
@@ -49,5 +55,23 @@ struct ServiceDetailView: View {
             }
         }
         .background(Color.cariBackground)
+        .alert("No fue posible abrir la aplicación Teléfono en este dispositivo.", isPresented: $showCallError) {
+            Button("Aceptar", role: .cancel) {}
+        }
+    }
+
+    /// Pide al sistema abrir el enlace telefónico; el usuario decide si realiza la llamada.
+    private func call(_ phone: String) {
+        let digits = phone.filter(\.isNumber)
+        let international = digits.hasPrefix("52") && digits.count > 10 ? digits : "52" + digits
+        guard let url = URL(string: "tel:+\(international)") else {
+            showCallError = true
+            return
+        }
+        openURL(url) { accepted in
+            if !accepted {
+                showCallError = true
+            }
+        }
     }
 }

@@ -54,10 +54,16 @@ struct CenterRepository {
         Array(Set(centers.compactMap(\.zone))).sorted()
     }
 
+    /// Centro que ofrece "Recibir ropa": su registro está en las observaciones
+    /// del centro y no en una clave de servicio.
+    private static let clothingServiceId = "recibir_ropa"
+    private static let clothingCenterId = "CP027"
+
     /// Filtra por servicio y/o zona, ambos opcionales.
     /// - Sin filtros: todos los centros, en el orden del archivo.
     /// - Servicio: centros con alguna clave de `ServiceExcelMapping`; si el servicio
-    ///   no tiene claves confirmadas, no se devuelve ningún centro.
+    ///   no tiene claves confirmadas, no se devuelve ningún centro. "Recibir ropa"
+    ///   se resuelve solo con el centro CP027.
     /// - Zona: igualdad exacta; los centros sin zona quedan fuera.
     func findByFilter(serviceId: String? = nil, zone: String? = nil) -> [Center] {
         let serviceKeys = serviceId.map { ServiceExcelMapping.excelKeys(for: $0) } ?? []
@@ -66,6 +72,8 @@ struct CenterRepository {
             let matchesService: Bool
             if serviceId == nil {
                 matchesService = true
+            } else if serviceId == Self.clothingServiceId {
+                matchesService = center.id == Self.clothingCenterId
             } else if serviceKeys.isEmpty {
                 matchesService = false
             } else {

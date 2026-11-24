@@ -20,12 +20,15 @@ struct SectionParagraph: Identifiable {
 struct ServiceDetailSection: Identifiable {
     let title: String
     let paragraphs: [SectionParagraph]
+    /// Teléfono de contacto de la sección, con el formato en que se muestra.
+    let contactPhone: String?
 
     var id: String { title }
 
-    init(title: String, paragraphs: [SectionParagraph] = []) {
+    init(title: String, paragraphs: [SectionParagraph] = [], contactPhone: String? = nil) {
         self.title = title
         self.paragraphs = paragraphs
+        self.contactPhone = contactPhone
     }
 }
 

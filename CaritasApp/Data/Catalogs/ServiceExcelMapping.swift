@@ -22,7 +22,9 @@ enum ServiceExcelMapping {
         "banco_de_medicamentos": ["banco_de_medicamentos"],
         "envio_pacientes_clinica_fundacion": ["envio_pacientes_clinica_fundacion"],
         "bazar": ["bazar"],
-        "aparatos_ortopedicos": ["aparatos_ortopedicos"]
+        "aparatos_ortopedicos": ["aparatos_ortopedicos"],
+        "asistencia_en_desastres": ["asistencia_en_desastres"],
+        "auxilio_migrantes_y_peregrinos": ["auxilio_migrantes_y_peregrinos"]
     ]
 
     /// Servicios del catálogo sin una clave confirmada en los datos de centros.

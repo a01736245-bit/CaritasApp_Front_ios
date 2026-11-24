@@ -50,7 +50,7 @@ enum OrientationCatalog {
         OrientationQuestion(
             id: "q8_migrantes",
             text: "¿Eres una persona migrante y necesitas ayuda?",
-            targetCategoryId: "migrantes",
+            targetCategoryId: "acompanamiento-espiritual",
             isTextVerified: false
         ),
         OrientationQuestion(
@@ -70,8 +70,10 @@ enum OrientationCatalog {
         "estancia-infantil": ("Estancia infantil", "Cuidado y atención para niñas y niños."),
         "apoyo_fisico": ("Apoyo físico", "Aparatos ortopédicos y apoyo para tu movilidad."),
         "desastres": ("Asistencia a desastres", "Apoyo ante emergencias y desastres."),
-        "migrantes": ("Auxilio a migrantes", "Ayuda para personas migrantes."),
-        "acompanamiento-espiritual": ("Acompañamiento y apoyo espiritual", "Apoyo emocional, espiritual y acompañamiento.")
+        "acompanamiento-espiritual": (
+            "Acompañamiento y apoyo espiritual",
+            "Apoyo psicológico, cuidado de la creación, servicios eucarísticos, visitas a personas privadas de su libertad y auxilio a migrantes y peregrinos."
+        )
     ]
 
     static func resultFor(categoryId: String) -> OrientationResult? {

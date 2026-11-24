@@ -5,11 +5,22 @@ import SwiftUI
 struct InfoAccordion: View {
     let title: String
     let paragraphs: [SectionParagraph]
+    /// Texto del botón de contacto y su acción; ambos son nil si la sección no tiene teléfono.
+    let callTitle: String?
+    let onCall: (() -> Void)?
     @State private var isExpanded: Bool
 
-    init(title: String, paragraphs: [SectionParagraph], initiallyExpanded: Bool = false) {
+    init(
+        title: String,
+        paragraphs: [SectionParagraph],
+        initiallyExpanded: Bool = false,
+        callTitle: String? = nil,
+        onCall: (() -> Void)? = nil
+    ) {
         self.title = title
         self.paragraphs = paragraphs
+        self.callTitle = callTitle
+        self.onCall = onCall
         _isExpanded = State(initialValue: initiallyExpanded)
     }
 
@@ -53,8 +64,17 @@ struct InfoAccordion: View {
         )
     }
 
-    @ViewBuilder
     private var content: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            paragraphsContent
+            if let callTitle, let onCall {
+                SecondaryButton(title: callTitle, action: onCall)
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var paragraphsContent: some View {
         if paragraphs.isEmpty {
             Text("Información pendiente de confirmar.")
                 .font(CariTypography.bodyMedium)
