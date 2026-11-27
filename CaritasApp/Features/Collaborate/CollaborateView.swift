@@ -9,6 +9,8 @@ struct CollaborateView: View {
 
     @Environment(\.openURL) private var openURL
     @State private var showWhatsAppError = false
+    @State private var donationConcept = ""
+    @State private var donationQuantity = ""
 
     /// Lee el contenido de la sección activa; al cambiar de chip se detiene la lectura.
     private var speakableText: String {
@@ -26,6 +28,11 @@ struct CollaborateView: View {
             return joinSpeakable(
                 DonationsView.title,
                 DonationsView.subtitle,
+                DonationsView.procurementTitle,
+                DonationsView.procurementDescription,
+                "WhatsApp: \(phoneForSpeech(DonationContactConfig.whatsAppLabel))",
+                "Teléfono: \(phoneForSpeech(DonationContactConfig.phoneLabel))",
+                "Correo: \(DonationContactConfig.email)",
                 DonationCatalog.items.map { "\($0.title)." }.joined(separator: " ")
             )
         }
@@ -59,13 +66,18 @@ struct CollaborateView: View {
                     case .voluntariado:
                         volunteerContent
                     case .donaciones:
-                        DonationsView(onItemTap: onDonationItemTap)
+                        DonationsView(
+                            concept: $donationConcept,
+                            quantity: $donationQuantity,
+                            onItemTap: onDonationItemTap
+                        )
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 20)
                 .padding(.bottom, 24)
             }
+            .scrollDismissesKeyboard(.interactively)
         }
         .background(Color.cariBackground)
         .alert("No fue posible abrir el enlace de WhatsApp en este dispositivo.", isPresented: $showWhatsAppError) {

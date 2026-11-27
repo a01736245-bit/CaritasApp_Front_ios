@@ -7,13 +7,16 @@ struct DonationItemDetailView: View {
     let onConsultCenters: () -> Void
     let onBack: () -> Void
 
+    static let receptionNotice = "Puedes consultar el directorio de centros. La recepción de este artículo no está confirmada; verifica directamente con el centro antes de acudir."
+
     private var speakableText: String {
         joinSpeakable(
             item.title,
             item.category.map { "Categoría: \($0)" },
             item.conditions.map { "Características o condiciones: \($0)" },
             item.purpose.map { "¿Para qué se usa? \($0)" },
-            item.hasInfo ? nil : pendingSpeakableText
+            item.hasInfo ? nil : pendingSpeakableText,
+            Self.receptionNotice
         )
     }
 
@@ -31,7 +34,7 @@ struct DonationItemDetailView: View {
 
                     infoCard
 
-                    Text("Puedes consultar el directorio de centros. La recepción de este artículo no está confirmada; verifica directamente con el centro antes de acudir.")
+                    Text(Self.receptionNotice)
                         .font(CariTypography.bodyMedium)
                         .foregroundStyle(Color.cariNavyMuted)
                         .padding(.top, 16)

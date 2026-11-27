@@ -101,3 +101,22 @@ let otherBenefitsNotice = "Para conocer los apoyos disponibles, requisitos y hor
 private extension String {
     var nilIfEmpty: String? { isEmpty ? nil : self }
 }
+
+/// Texto que se lee en Ayuda: solo lo que la pantalla muestra, sin enlaces.
+func helpSpeakableText() -> String {
+    joinSpeakable(
+        "¿En qué te podemos ayudar?",
+        "Elige una opción. Estamos para acompañarte.",
+        "No sé qué necesito. Te orientamos con unas preguntas.",
+        "Ver todos los centros. Consulta las ubicaciones de ayuda.",
+        "En cada pantalla verás el botón Escuchar. Tócalo y la aplicación te leerá la información en voz alta.",
+        HelpContactConfig.officeName,
+        HelpContactConfig.officeAddress,
+        HelpContactConfig.officeWeekdays,
+        HelpContactConfig.officeSaturday,
+        "Para agendar una cita, llama o escríbenos por WhatsApp.",
+        "Teléfono: \(phoneForSpeech(HelpContactConfig.officePhoneLabel))",
+        "WhatsApp: \(phoneForSpeech(HelpContactConfig.whatsAppLabel))",
+        "Esta aplicación no te pide crear una cuenta ni compartir datos para recibir ayuda."
+    )
+}

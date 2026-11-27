@@ -1,7 +1,6 @@
 import SwiftUI
 
-/// Pantalla Ayuda: una sola vista con acceso al orientador y al directorio de centros.
-/// Todavía no hay datos de contacto confirmados, por lo que se muestran como pendientes.
+/// Pantalla Ayuda: acceso al orientador y al directorio de centros, y datos de la oficina central.
 struct HelpView: View {
     let onGuideTap: () -> Void
     let onViewCentersTap: () -> Void
@@ -10,17 +9,11 @@ struct HelpView: View {
     private let noticeGreen = Color(red: 0x2E / 255, green: 0x7D / 255, blue: 0x32 / 255)
     private let noticeBackground = Color(red: 0xE9 / 255, green: 0xF5 / 255, blue: 0xEC / 255)
 
+    @Environment(\.openURL) private var openURL
+    @State private var alertMessage: String?
+
     private var speakableText: String {
-        joinSpeakable(
-            "¿En qué te podemos ayudar?",
-            "Elige una opción. Estamos para acompañarte.",
-            "No sé qué necesito. Te orientamos con unas preguntas.",
-            "Ver todos los centros. Consulta las ubicaciones de ayuda.",
-            "En cada pantalla verás el botón Escuchar. Tócalo y la aplicación te leerá la información en voz alta.",
-            "Teléfonos para llamar. Información de contacto pendiente de confirmar.",
-            "¿Necesitas orientación o agendar una cita? Solo la clínica de diagnóstico requiere cita.",
-            "Esta aplicación no te pide crear una cuenta ni compartir datos para recibir ayuda."
-        )
+        helpSpeakableText()
     }
 
     var body: some View {
@@ -57,9 +50,7 @@ struct HelpView: View {
 
                         listenInfoCard
 
-                        phonesSection
-
-                        orientationContactCard
+                        officeContactCard
 
                         noAccountBanner
                     }
@@ -70,6 +61,15 @@ struct HelpView: View {
             }
         }
         .background(Color.cariBackground)
+        .alert(
+            alertMessage ?? "",
+            isPresented: Binding(
+                get: { alertMessage != nil },
+                set: { if !$0 { alertMessage = nil } }
+            )
+        ) {
+            Button("Aceptar", role: .cancel) {}
+        }
     }
 
     // MARK: - Bloques
@@ -97,61 +97,63 @@ struct HelpView: View {
         .modifier(CardBackground(cornerRadius: 16))
     }
 
-    private var phonesSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 8) {
-                Image(systemName: "phone")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 22, height: 22)
-                    .foregroundStyle(Color.cariRed)
-                    .accessibilityHidden(true)
-                Text("Teléfonos para llamar")
-                    .font(CariTypography.titleMedium)
-                    .foregroundStyle(Color.cariNavy)
-            }
-
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 12) {
-                    Image(systemName: "phone")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20, height: 20)
-                        .foregroundStyle(Color.cariNavyMuted)
-                        .accessibilityHidden(true)
-                    Text("Información de contacto pendiente de confirmar.")
-                        .font(CariTypography.bodyMedium)
-                        .foregroundStyle(Color.cariNavyMuted)
-                }
-
-                PrimaryButton(title: "Ver centros", action: onViewCentersTap)
-            }
-            .padding(16)
-            .modifier(CardBackground(cornerRadius: 14))
-        }
-    }
-
-    /// El número de WhatsApp todavía no está confirmado: el botón se muestra deshabilitado.
-    private var orientationContactCard: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text("¿Necesitas orientación o agendar una cita?")
+    private var officeContactCard: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(HelpContactConfig.officeName)
                 .font(CariTypography.titleMedium)
                 .foregroundStyle(Color.cariNavy)
 
-            Text("Escríbenos por WhatsApp y te ayudaremos a encontrar el servicio adecuado. Solo la clínica de diagnóstico requiere cita.")
+            Text(HelpContactConfig.officeAddress)
                 .font(CariTypography.bodyMedium)
                 .foregroundStyle(Color.cariNavyMuted)
-                .padding(.top, 6)
-                .padding(.bottom, 16)
 
-            PrimaryButton(
-                title: "Solicitar orientación por WhatsApp",
-                action: {},
-                isEnabled: false
+            Text("\(HelpContactConfig.officeWeekdays)\n\(HelpContactConfig.officeSaturday)")
+                .font(CariTypography.bodyMedium)
+                .foregroundStyle(Color.cariNavyMuted)
+
+            Text("Para agendar una cita, llama o escríbenos por WhatsApp.")
+                .font(CariTypography.bodyMedium)
+                .foregroundStyle(Color.cariNavyMuted)
+
+            SecondaryButton(
+                title: "Llamar al \(HelpContactConfig.officePhoneLabel)",
+                action: callOffice
             )
+            SecondaryButton(title: "Escribir por WhatsApp", action: writeByWhatsApp)
+
+            Text("WhatsApp: \(HelpContactConfig.whatsAppLabel)")
+                .font(CariTypography.bodyMedium)
+                .foregroundStyle(Color.cariNavyMuted)
         }
         .padding(18)
         .modifier(CardBackground(cornerRadius: 16))
+    }
+
+    private func callOffice() {
+        open(
+            HelpContactConfig.officePhoneURL,
+            errorMessage: "No fue posible abrir la aplicación Teléfono en este dispositivo."
+        )
+    }
+
+    private func writeByWhatsApp() {
+        open(
+            HelpContactConfig.whatsAppURL,
+            errorMessage: "No fue posible abrir el enlace de WhatsApp en este dispositivo."
+        )
+    }
+
+    /// Pide al sistema abrir el enlace; si no puede, muestra el aviso indicado.
+    private func open(_ url: URL?, errorMessage: String) {
+        guard let url else {
+            alertMessage = errorMessage
+            return
+        }
+        openURL(url) { accepted in
+            if !accepted {
+                alertMessage = errorMessage
+            }
+        }
     }
 
     private var noAccountBanner: some View {

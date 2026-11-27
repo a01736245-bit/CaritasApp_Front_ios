@@ -44,19 +44,15 @@ struct WelcomeView: View {
                 .padding(.vertical, 12)
 
                 VStack(alignment: .leading, spacing: 0) {
-                    GeometryReader { geo in
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.cariIllustrationBg)
-                            Image(systemName: "person.3")
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.cariIllustrationBg)
+                        .aspectRatio(1.8, contentMode: .fit)
+                        .overlay(
+                            Image("bienvenida_carivita")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 56, height: 56)
-                                .foregroundStyle(Color.cariNavyMuted)
-                        }
-                        .frame(width: geo.size.width, height: geo.size.width)
-                    }
-                    .aspectRatio(1, contentMode: .fit)
+                                .accessibilityHidden(true)
+                        )
 
                     Spacer().frame(height: 26)
 
