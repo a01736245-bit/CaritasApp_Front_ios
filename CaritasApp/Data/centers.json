@@ -98,7 +98,7 @@
     "serviceSchedules": {
       "bazar": "Jueves",
       "consultas_medicas": "Cualquier día de la semana",
-      "banco_de_medicamentos" : "Miercoles",
+      "banco_de_medicamentos" : "Miércoles",
       "despensas_parroquia" : "Viernes",
       "otros_beneficios" : "",
       "servicios_eucaristicos_hospitales" : "Sin días ni horarios definidos"
@@ -508,7 +508,7 @@
     "serviceSchedules": {
 
       "aparatos_ortopedicos" : "De Lunes a Sábado",
-      "comidas_calientes": "De Lunes as Sábado",
+      "comidas_calientes": "De Lunes a Sábado",
       "despensas_banco_alimentos" : "Sábados"
     },
     "mapsUrl": "https://maps.app.goo.gl/bxREASDQvtK4Z9XD9"
@@ -1171,7 +1171,7 @@
     "vocal1": "Agustín Santos Rojas",
     "vocal2": "Alejandro Altamirano Murrieta",
     "vocal3": "Simplicia Apolinar Murrieta",
-    "address": "Calle Antonio Julián Zapata, Esquina con Calle Guadalupana., 73972",
+    "address": "Calle Antonio Julián Zapata, Esquina con Calle Guadalupana, 73972",
     "phones": [
       "2288266513",
       "2312811602"

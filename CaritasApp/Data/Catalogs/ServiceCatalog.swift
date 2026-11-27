@@ -431,7 +431,7 @@ enum ServiceCatalog {
                                 ),
                                 SectionParagraph(
                                     label: "Nuestra Señora de Guadalupe, Xaltipan",
-                                    text: "Calle Antonio Julián Zapata, Esquina con Calle Guadalupana., 73972"
+                                    text: "Calle Antonio Julián Zapata, Esquina con Calle Guadalupana, 73972"
                                 ),
                                 SectionParagraph(
                                     text: "Para ver más lugares donde se ofrece este servicio, toca «Ver lugares».",
@@ -635,7 +635,7 @@ enum ServiceCatalog {
                                 ),
                                 SectionParagraph(
                                     label: "Nuestra Señora de Guadalupe, Xaltipan",
-                                    text: "Calle Antonio Julián Zapata, Esquina con Calle Guadalupana., 73972"
+                                    text: "Calle Antonio Julián Zapata, Esquina con Calle Guadalupana, 73972"
                                 ),
                                 SectionParagraph(
                                     text: "Para ver más lugares donde se ofrece este servicio, toca «Ver lugares».",

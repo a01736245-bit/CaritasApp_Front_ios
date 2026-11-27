@@ -1,17 +1,21 @@
 import SwiftUI
 
-/// Pantalla previa al listado de centros. No usa la ubicación del dispositivo:
-/// se puede abrir el listado sin filtrar por zona o elegir una zona.
+/// Pantalla previa al listado de centros de un servicio. No usa la ubicación del dispositivo:
+/// se elige una zona o se abre el listado del servicio sin filtrar por zona.
 struct LocationChoiceView: View {
     let onShowAllCenters: () -> Void
     let onChooseZone: () -> Void
     let onBack: () -> Void
 
+    private static let title = "¿Cómo quieres buscar los centros?"
+    private static let description = "Elige una zona o consulta todos los centros de este servicio."
+
     private var speakableText: String {
         joinSpeakable(
-            "¿Cómo quieres ver los lugares?",
-            "Puedes ver todos los centros disponibles o elegir tu zona para ver solo los de esa zona.",
-            "No necesitas compartir tu ubicación para consultar los centros."
+            Self.title,
+            Self.description,
+            "Elegir mi zona.",
+            "Ver centros sin filtrar."
         )
     }
 
@@ -33,30 +37,23 @@ struct LocationChoiceView: View {
                     }
                     .accessibilityHidden(true)
 
-                    Text("¿Cómo quieres ver los lugares?")
+                    Text(Self.title)
                         .font(CariTypography.headlineLarge)
                         .foregroundStyle(Color.cariNavy)
                         .multilineTextAlignment(.center)
                         .padding(.top, 20)
 
-                    Text("Puedes ver todos los centros disponibles o elegir tu zona para ver solo los de esa zona.")
+                    Text(Self.description)
                         .font(CariTypography.bodyLarge)
                         .foregroundStyle(Color.cariNavy)
                         .multilineTextAlignment(.center)
                         .padding(.top, 12)
 
-                    PrimaryButton(title: "Ver todos los centros", action: onShowAllCenters)
+                    PrimaryButton(title: "Elegir mi zona", action: onChooseZone)
                         .padding(.top, 28)
 
-                    SecondaryButton(title: "Elegir mi zona", action: onChooseZone)
+                    SecondaryButton(title: "Ver centros sin filtrar", action: onShowAllCenters)
                         .padding(.top, 14)
-
-                    Text("No necesitas compartir tu ubicación para consultar los centros.")
-                        .font(CariTypography.bodyMedium)
-                        .foregroundStyle(Color.cariNavyMuted)
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: .infinity)
-                        .padding(.top, 20)
                 }
                 .padding(.horizontal, 24)
                 .padding(.vertical, 24)

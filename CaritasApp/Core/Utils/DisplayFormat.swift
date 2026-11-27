@@ -12,23 +12,23 @@ func formatZoneLabel(_ zone: String) -> String {
         .joined(separator: " ")
 }
 
-/// Une los guiones de corte de línea de las etiquetas de servicio
+/// Nombre de un servicio para mostrar. Algunas etiquetas del origen se reemplazan por su
+/// nombre confirmado; en el resto se unen los guiones de corte de línea
 /// ("Medicamen-tos" → "Medicamentos") cuando están entre dos letras minúsculas.
-/// Si la etiqueta termina en una "Y" suelta ("Apoyo Psicológico Y") y lo que la
-/// precede coincide con el título de un servicio del catálogo, usa ese título.
 func displayServiceLabel(_ rawLabel: String) -> String {
-    let joined = rawLabel.replacingOccurrences(
-        of: "([a-záéíóúñ])-([a-záéíóúñ])",
-        with: "$1$2",
-        options: .regularExpression
-    )
-    guard joined.hasSuffix(" Y") else { return joined }
-
-    let base = String(joined.dropLast(2))
-    let confirmed = ServiceCatalog.categories
-        .flatMap(\.services)
-        .first { $0.title.caseInsensitiveCompare(base) == .orderedSame }
-    return confirmed?.title ?? joined
+    switch rawLabel {
+    case "Apoyo Psicológico Y": return "Apoyo psicológico"
+    case "Cursos, Talleres o Seminarios": return "Cursos, talleres o seminarios"
+    case "Despensas dadas por Banco de Alimentos": return "Despensas del Banco de Alimentos"
+    case "Despensas dadas por la Parroquia": return "Despensas de la parroquia"
+    case "Auxilio Migrantes y Peregrinos": return "Auxilio a migrantes y peregrinos"
+    default:
+        return rawLabel.replacingOccurrences(
+            of: "([a-záéíóúñ])-([a-záéíóúñ])",
+            with: "$1$2",
+            options: .regularExpression
+        )
+    }
 }
 
 extension Center {
